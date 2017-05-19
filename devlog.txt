@@ -3,4 +3,5 @@
 Allan + Eric brought up idea of Pokemon
 Team fleshed it out and completed proposal
 
+Tim- .gitignore commit
 
