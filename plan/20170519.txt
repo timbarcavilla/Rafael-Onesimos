@@ -1,0 +1,15 @@
+Objectives(in order of importance)
+
+1. Flesh out proposal and get green lighted.
+2. Make sure everybody has understanding of project + agree on tools for each feature.
+3. Get Tim to play Pokemon for the first time ever.
+4. Create UML/Flowchart/Labor Distribution
+
+Hard Deliverables
+1. New Proposal
+2. UML
+3. Flowchart
+4. Labor Distribution chart
+
+Soft Deliverables
+1. Telepathy 
