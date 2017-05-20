@@ -1,0 +1,4 @@
+Objectives:
+
+1. Finish Pokemon superclass
+2. Start working on subclasses (different pokemons)
