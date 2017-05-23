@@ -5,3 +5,6 @@ Team fleshed it out and completed proposal
 
 Tim- .gitignore commit
 
+05/20/17
+Eric continued work on class files
+Allan + Tim fleshed out rough UML diagram
