@@ -1,0 +1,9 @@
+Objectives:
+
+1. Finishing touch to Pokemon class
+
+2. Convert Pokemon to pde file
+
+3. Continue working on Move class
+
+4. Create 3 subclasses of Pokemon
