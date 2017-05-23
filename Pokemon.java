@@ -87,6 +87,8 @@ public abstract class Pokemon {
     public int getSpdef() { return _spdef; }
     public int getSpeed() { return _speed; }
 
+    public int getHealth() { return _health; }
+
     public int setIndex( int newIndex) {
 	int i = _index;
 	_index = newIndex;
