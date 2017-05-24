@@ -1,0 +1,6 @@
+Objectives:
+
+1. 3 subclasses for Pokemon
+
+2. Continue working on Player
+
