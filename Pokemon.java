@@ -3,7 +3,7 @@
 public abstract class Pokemon {
 
     // Classification
-    private int _index;
+    private final int _index;
     private String _name;
     private int _lvl;
     private int _exp;
@@ -30,42 +30,28 @@ public abstract class Pokemon {
     Move atk3;
     Move atk4;
     
-
+    /* 
     public Pokemon() {
-	
 	_index = 0;
-	_name = "missing no.";
 	_lvl = 1;
-
-	_hp = 25;
-	_atk = 10;
-	_def = 10;
-	_spatk = 10;
-	_spdef = 10;
-	_speed = 5;
-
-	_health = _hp;
-
-        atk1 = new Move( _move1, 20 );
-	atk2 = new Move( _move2, 15 );
-	atk3 = new Move( _move3, 15 );
-	atk4 = new Move( _move4, 5 );
-	
     }
 
     public Pokemon( int i, String n, int lvl ) {
 
-	this();
 	_index = i;
 	_name = n;
 	_lvl = lvl;
 
     }
+    */
 
-    public Pokemon( int i, String n, int lvl, Move move1, Move move2, String move3, String move4 ) {
+    public Pokemon( int i, String n, int lvl, Move move1, Move move2, Move move3, Move move4 ) {
 
-	this( i, n, lvl );
+	//this( i, n, lvl );
 
+	_index = i;
+	_name = n;
+	_lvl = lvl;
 	atk1 = move1;
 	atk2 = move2;
 	atk3 = move3;
@@ -89,11 +75,6 @@ public abstract class Pokemon {
 
     public int getHealth() { return _health; }
 
-    public int setIndex( int newIndex) {
-	int i = _index;
-	_index = newIndex;
-	return i;
-    }
     public String setName( String newName ) {
 	String s = _name;
 	_name = newName;
@@ -252,7 +233,7 @@ public abstract class Pokemon {
 
     public void levelUp() {
 	_index += 1;
-	_hp += 2;
+	_hp += 4;
 	_atk += 2;
 	_def += 2;
 	_spatk += 2;
