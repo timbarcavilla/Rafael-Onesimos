@@ -8,3 +8,8 @@ Tim- .gitignore commit
 05/20/17
 Eric continued work on class files
 Allan + Tim fleshed out rough UML diagram
+
+05/23/17
+Eric worked on Player class + sketched out rough flowchart
+Tim updated Pokemon class
+Allan continued work on UML and digitized UML/flowchart
