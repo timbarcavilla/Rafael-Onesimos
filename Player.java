@@ -1,58 +1,77 @@
-import java.util.ArrayPriorityQueue
-import java.util.Scanner;
+import java.lang.ArrayPriorityQueue;
+import userInput.Keyboard;
+import poke.Pokemon;
 
-public class Player {
+public class Player extends Trainer{
 
     private int numBadges;
-    private ___ pokedex; // Change type of pokedex
-    
+    private ArrayPriorityQueue<Pokemon> _pokedex; // Change type of pokedex
 
-    ArrayPriorityQueue<Pokemon> party; // Change to working Priority Queue class
-
-    public Player() {
+    public Player(String newName) {
 	numBadges = 0;
-	pokedex = _____; // Change type.
-	party = new ArrayList<Pokemon>(); // Change this too.
+	_pokedex = new ArrayPriorityQueue<Pokemon>(); // Change type.
+	_name = newName;
+	_party = new ArrayList<Pokemon>(); // Change this too.
     }
 
     // ACCESSORS AND MUTATORS
 
-    public getBadges() { return numBadges; }
+    public int getBadges() { return numBadges; }
+
+    public Pokemon getPokedex(int index){
+	for (Pokemon each : _pokedex){
+	    if (each.getIndex() == index)
+		return each;
+	}
+	return null;
+    }
 
     // To be called when you beat a gym.
-    public addBadge() { numBadges += 1; }
+    public void addBadge() { numBadges += 1; }
 
-    public Pokemon getPokemon( Pokemon p ) {
+    public void addPokemon( Pokemon p ) {
 
-	if ( party.size() < 6 ) { party.add( p ); }
+	if ( _party.size() < 6 ) 
+	    _party.add( p ); 
 
 	else {
-	    Scanner user_input = new Scanner(System.in);
-
+	    boolean pokeRemoved = false;
 	    String RemPokemon;
 	    System.out.print("What pokemon would you like to release back into the wild?");
-	    String RemPokemon = user_input.next();
-	    for (int i=0; i<party.size(); i++){
-		if (party.get(i).getName().equals(RemPokemon)){
-		    party.remove(i);
+	    System.out.println(_party.toString());
+	    String RemPokemon = Keyboard.readString();
+	    while (!pokeRemoved){
+		int i = 0;
+		while (i < _party.size()){
+		    if (_party.get(i).getName().equals(RemPokemon)){
+			_party.remove(i);
+			break;
+		    }
+		    else
+			i++;
 		}
+		if (i == _party.size())
+		    System.out.println("Invalid Input");
+		else
+		    pokeRemoved = true;
 	    }
-	    party.add(p);
+	    _party.add(p);
 		        
 	}
 	
     }
+
+    public void addPokedex(Pokemon p){
+	_pokedex.add(p);
+    }
     
     public boolean hasPokemon() {
-	
-	boolean retBool = false;
-	
-	for ( Pokemon p : party ) {
-	    if ( p.getHealth() > 0 ) {
-		retBool = true;
-	    }
+
+	for ( Pokemon p : _party ) {
+	    if ( p.getHealth() > 0 ) 
+		return true;
 	}
-	return retBool;
+	return false;
     }
 
     
