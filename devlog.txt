@@ -13,3 +13,10 @@ Allan + Tim fleshed out rough UML diagram
 Eric worked on Player class + sketched out rough flowchart
 Tim updated Pokemon class
 Allan continued work on UML and digitized UML/flowchart
+
+05/24/17
+
+Eric worked on Pokemon and Move & Created subclasses of Pokemon
+Tim created Trainer superclass and Leader (Trainer subclass)
+Allan worked on Player (Trainer subclass)
+
