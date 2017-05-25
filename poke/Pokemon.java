@@ -2,11 +2,17 @@
 
 abstract class Pokemon {
 
+    private final String[] types = { "NONE", "NORMAL", "FIRE", "GRASS", "WATER", "GROUND", "ELECTRIC", "ICE", "FIGHTING", "POISON", "FLYING", "PSYCHIC", "BUG", "ROCK", "GHOST", "DRAGON" };
+
     // Classification
-    private final int _index;
+    private int _index;
     private String _name;
+    private String _type1;
+    private String _type2;
     private int _lvl;
     private int _exp;
+    private boolean hasEvo;
+    private int evoLvl;
 
     // Base Stats
     private int _hp;
@@ -47,6 +53,7 @@ abstract class Pokemon {
 	_index = i;
 	_name = n;
 	_lvl = lvl;
+	hasEvo = false;
 	
 	_hp = 10;
 	_health = _hp;
@@ -67,8 +74,12 @@ abstract class Pokemon {
 
     public int getIndex() { return _index; }
     public String getName() { return _name; }
+    public String getType1() { return _type1; }
+    public String getType2() { return _type2; }
     public int getLevel() { return _lvl; }
     public int getExp() { return _exp; }
+    public boolean hasEvo() { return hasEvo; }
+    public int getEvoLvl() { return evoLvl; }
 
     public int getHp() { return _hp; }
     public int getAtk() { return _atk; }
@@ -95,6 +106,21 @@ abstract class Pokemon {
 	_name = newName;
 	return s;
     }
+
+    public String setType1( String newType ) {
+	String s = _type1;
+	_type1 = newType;
+	return s;
+    }
+    
+    public String setType2( String newType ) {
+	String s = _type2;
+	_type2 = newType;
+	return s;
+    }
+
+    public void openEvo() { hasEvo = true; }
+    public void closeEvo() { hasEvo = false; }
 
     public Move setMove( int place, Move m ) {
 
@@ -151,6 +177,15 @@ abstract class Pokemon {
 	_spdef += 2;
 	_speed += 1;
 	_lvl += 1;
+	evolve(); // only evolves when _lvl == evoLvl
+    }
+
+    public void evolve() {
+
+	if ( hasEvo == true && _lvl == evoLvl) {
+		_index += 1;
+	}
+	
     }
 
     public void heal() {
