@@ -1,6 +1,7 @@
 // Pokemon template superclass
+//package poke;
 
-abstract class Pokemon {
+public abstract class Pokemon implements Comparable{
 
     private final String[] types = { "NONE", "NORMAL", "FIRE", "GRASS", "WATER", "GROUND", "ELECTRIC", "ICE", "FIGHTING", "POISON", "FLYING", "PSYCHIC", "BUG", "ROCK", "GHOST", "DRAGON" };
 
@@ -196,5 +197,13 @@ abstract class Pokemon {
 	atk4.restorePP();
     }
     
+    public int compareTo(Pokemon p){
+	if (_index > p.getIndex())
+	    return 1;
+	else if (_index < p.getIndex())
+	    return -1;
+	else
+	    return 0;
+    }
     
 }
