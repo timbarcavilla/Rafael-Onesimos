@@ -1,3 +1,6 @@
+Rafael Onesimos - Eric Chen, Allan Wang, Zilin Wang
+APCS2 Final Project
+
 05/18/17
 
 Allan + Eric brought up idea of Pokemon
@@ -20,3 +23,8 @@ Eric worked on Pokemon and Move & Created subclasses of Pokemon
 Tim created Trainer superclass and Leader (Trainer subclass)
 Allan worked on Player (Trainer subclass)
 
+05/25/17
+
+Eric debugged Pokemon + Move, added types + evolution levels
+Tim edited Player and added Keyboard
+Allan created a few more subclasses of Pokemon and added Pokemon data
