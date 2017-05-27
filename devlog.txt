@@ -28,3 +28,8 @@ Allan worked on Player (Trainer subclass)
 Eric debugged Pokemon + Move, added types + evolution levels
 Tim edited Player and added Keyboard
 Allan created a few more subclasses of Pokemon and added Pokemon data
+
+05/26/17
+
+Tim started working on Gym, Puzzle, edited Pokemon
+
