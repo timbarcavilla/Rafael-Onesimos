@@ -6,8 +6,8 @@ import java.io.FileNotFoundException;
 public class Driver {
 
   public static boolean pokemonPicked = false;
-   public static boolean badgeWon = false;
-   public static boolean puzzleSolved = false;
+  public static boolean badgeWon = false;
+  public static boolean puzzleSolved = false;
 
 
    public static void main(String[] args){
@@ -23,7 +23,7 @@ public class Driver {
 
 
 
-   Player User = new Player(name);
+   Player user = new Player(name);
 
    //Choose a Pokemon to add
    while (pokemonPicked == false){
@@ -34,7 +34,7 @@ public class Driver {
 
      String yourPokemon = Keyboard.readString();
 
-     name.addPokemon(yourPokemon);
+     user.addPokemon(yourPokemon);
      pokemonPicked = true;
    }
 
@@ -51,18 +51,15 @@ public class Driver {
     }
 
     //battle
-    while (name.hasPokemon() && Brock.hasPokemon()){
+    while (user.hasPokemon() && Brock.hasPokemon()){
       //enter battle stuffs
     }
 
-    if (player.hasPokemon()){
-      player.addBadge();
+    if (user.hasPokemon()){
+
       //heal all pokemon
-      int i = 0;
-      while (i < name._party.size()){
-        name._party.get(i).heal();
-        i++
-      }
+      user.healPokemon();
+
       //add pokemon
       System.out.println("Choose a Pokemon to add to your party!")
       System.out.println("Which one will you pick?");
@@ -70,20 +67,22 @@ public class Driver {
       System.out.println("2. Onix");
       System.out.println("3. Geodude");
       String newPoke = Keyboard.readString();
-      player.addPokemon(newPoke);
+      user.addPokemon(newPoke);
+
+      //add badge
+      user.addBadge();
 
       //badge has been won
       badgeWon = true;
+      break;
 
     }
 
     if (Brock.hasPokemon()){
       System.out.println("ur a loser");
-       while (i < name._party.size()){
-        name._party.get(i).heal();
-        i++
-      }
+      user.healPokemon();
      //start over
+     continue;
 
     }
 

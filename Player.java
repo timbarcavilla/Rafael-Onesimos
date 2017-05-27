@@ -31,8 +31,8 @@ public class Player extends Trainer{
 
     public void addPokemon( Pokemon p ) {
 
-	if ( _party.size() < 6 ) 
-	    _party.add( p ); 
+	if ( _party.size() < 6 )
+	    _party.add( p );
 
 	else {
 	    boolean pokeRemoved = false;
@@ -56,24 +56,30 @@ public class Player extends Trainer{
 		    pokeRemoved = true;
 	    }
 	    _party.add(p);
-		        
+
 	}
-	
+
     }
 
     public void addPokedex(Pokemon p){
 	_pokedex.add(p);
     }
-    
+
     public boolean hasPokemon() {
 
 	for ( Pokemon p : _party ) {
-	    if ( p.getHealth() > 0 ) 
+	    if ( p.getHealth() > 0 )
 		return true;
 	}
 	return false;
     }
 
-    
+    public void healPokemon(){
+      for (Pokemon p : _party) {
+        p.heal();
+      }
+    }
+
+
 
 }
