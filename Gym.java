@@ -24,7 +24,7 @@ public class Gym{
 
 	int r = (int)(Math.random()*2);
 	if (r == 0)
-	    p = new Queenboard(_level+1);
+	    p = new QueenBoard(_level+1);
 	else
 	    p = new KnightTour(_level+2);
 	//not finished
