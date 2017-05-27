@@ -1,0 +1,7 @@
+Objective:
+
+Finish Driver file on code editor (Allan)
+
+Work on Puzzle's subclass (Queenboard & KnightTour) 
+
+Continue working on Pokemon 
