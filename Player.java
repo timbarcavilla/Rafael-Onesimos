@@ -31,14 +31,17 @@ public class Player extends Trainer{
 
     public void addPokemon( Pokemon p ) {
 
+      //if party is not full
 	if ( _party.size() < 6 )
 	    _party.add( p );
 
+      //if party is already full
 	else {
 	    boolean pokeRemoved = false;
 	    String RemPokemon;
 	    System.out.print("What pokemon would you like to release back into the wild?");
-	    System.out.println(_party.toString());
+      //show party
+	    showParty;
 	    String RemPokemon = Keyboard.readString();
 	    while (!pokeRemoved){
 		int i = 0;
@@ -50,21 +53,25 @@ public class Player extends Trainer{
 		    else
 			i++;
 		}
+    //invalid input for Pokemon name
 		if (i == _party.size())
 		    System.out.println("Invalid Input");
 		else
 		    pokeRemoved = true;
 	    }
-	    _party.add(p);
+
+	  _party.add(p);
 
 	}
 
     }
 
+    //add to player pokedex
     public void addPokedex(Pokemon p){
 	_pokedex.add(p);
     }
 
+    //check if party has Pokemon
     public boolean hasPokemon() {
 
 	for ( Pokemon p : _party ) {
@@ -74,10 +81,15 @@ public class Player extends Trainer{
 	return false;
     }
 
+    //heal Pokemon
     public void healPokemon(){
       for (Pokemon p : _party) {
         p.heal();
       }
+    }
+
+    public void showParty(){
+      System.out.println(_party.toString());
     }
 
 

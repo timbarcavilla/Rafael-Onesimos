@@ -21,8 +21,6 @@ public class Driver {
     System.out.println(name + "! Your very own Pokemon legend is about to unfold! A world of dreams and adventures with Pokemon awaits! Let's go!");
    //End intro---------------
 
-
-
    Player user = new Player(name);
 
    //Choose a Pokemon to add
@@ -43,12 +41,17 @@ public class Driver {
 
    Leader Brock = new Leader(Brock);
 
-    System.out.println("Entering the Pewter City gym");
+    System.out.println("Entering the Pewter City gym.");
 
     //puzzle
     while (puzzleSolved == false){
       //enter puzzle stuffs
     }
+
+    System.out.println("I'm BROCK! I'm PEWTER's GYM LEADER! I believe in rock hard
+               defense and determination! That's why my POKEMON are all the
+               rock-type! Do you still want to challenge me? Fine then!
+               Show me your best!");
 
     //battle
     while (user.hasPokemon() && Brock.hasPokemon()){
@@ -57,8 +60,13 @@ public class Driver {
 
     if (user.hasPokemon()){
 
+      System.out.println("Brock: I took you for granted. As proof of your victory, here's the
+               BOULDERBADGE! That's an official POKEMON LEAGUE BADGE!
+               Its bearer's POKEMON become more powerful!");
+
       //heal all pokemon
       user.healPokemon();
+      System.outprintln("All your Pokemon have been healed.");
 
       //add pokemon
       System.out.println("Choose a Pokemon to add to your party!")
@@ -79,7 +87,7 @@ public class Driver {
     }
 
     if (Brock.hasPokemon()){
-      System.out.println("ur a loser");
+      System.out.println("Brock: ur a loser");
       user.healPokemon();
      //start over
      continue;
@@ -91,6 +99,7 @@ public class Driver {
 
    //Start next Gym
    badgeWon = false;
+   puzzleSolved = false;
    while (badgeWon == false){
      //enter information for next gym
 

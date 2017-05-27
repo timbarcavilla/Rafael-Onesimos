@@ -5,7 +5,6 @@ APCS2 Final Project
 
 Allan + Eric brought up idea of Pokemon
 Team fleshed it out and completed proposal
-
 Tim- .gitignore commit
 
 05/20/17
@@ -32,4 +31,10 @@ Allan created a few more subclasses of Pokemon and added Pokemon data
 05/26/17
 
 Tim started working on Gym, Puzzle, edited Pokemon
+Eric made a csv file compiling most important stats(name, moves, stats, etc)
 Allan started Driver file
+
+05/27/17
+
+Tim started Queen + King puzzle
+Allan continued to work on Driver File
