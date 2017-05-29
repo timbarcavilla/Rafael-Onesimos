@@ -3,34 +3,34 @@
 
 public abstract class Pokemon implements Comparable{
 
-    private final String[] types = { "NONE", "NORMAL", "FIRE", "GRASS", "WATER", "GROUND", "ELECTRIC", "ICE", "FIGHTING", "POISON", "FLYING", "PSYCHIC", "BUG", "ROCK", "GHOST", "DRAGON" };
+    protected final String[] types = { "NONE", "NORMAL", "FIRE", "GRASS", "WATER", "GROUND", "ELECTRIC", "ICE", "FIGHTING", "POISON", "FLYING", "PSYCHIC", "BUG", "ROCK", "GHOST", "DRAGON" };
 
     // Classification
-    private int _index;
-    private String _name;
-    private String _type1;
-    private String _type2;
-    private int _lvl;
-    private int _exp;
-    private boolean hasEvo;
-    private int evoLvl;
+    protected int _index;
+    protected String _name;
+    protected String _type1;
+    protected String _type2;
+    protected int _lvl;
+    protected int _exp;
+    protected boolean hasEvo;
+    protected int evoLvl;
 
     // Base Stats
-    private int _hp;
-    private int _atk;
-    private int _def;
-    private int _spatk;
-    private int _spdef;
-    private int _speed;
+    protected int _hp;
+    protected int _atk;
+    protected int _def;
+    protected int _spatk;
+    protected int _spdef;
+    protected int _speed;
 
     // Battle Stats
-    private int _health;
+    protected int _health;
 
     // Moves
-    private Move atk1;
-    private Move atk2;
-    private Move atk3;
-    private Move atk4;
+    protected Move atk1;
+    protected Move atk2;
+    protected Move atk3;
+    protected Move atk4;
     
     /* 
     public Pokemon() {
@@ -45,7 +45,7 @@ public abstract class Pokemon implements Comparable{
 	_lvl = lvl;
 
     }
-    */
+    
 
     public Pokemon( int i, String n, int lvl, Move move1, Move move2, Move move3, Move move4 ) {
 
@@ -70,7 +70,7 @@ public abstract class Pokemon implements Comparable{
 	atk4 = move4;
 	
     }
-
+    */
     /** ACCESSORS AND MUTATORS **/
 
     public int getIndex() { return _index; }
