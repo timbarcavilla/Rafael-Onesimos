@@ -5,99 +5,102 @@ boolean puzzleSolved;
 
 boolean doneTyping;
 
+boolean stringType;
+boolean intType;
+
+Pokemon yourPokemon;
+
+String userStr = "";
+int userInt = 0;
+
 void setup() {
   size(600, 600);
   pokemonPicked = false;
   badgeWon = false;
   puzzleSolved = false;
   doneTyping = false;
+  stringType = false;
+  intType = false;
 }
 
 void draw() {
 
+  background(0);
   //Intro-------------------
   println("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!");
   println("What is your name?");
-  String name = "";
+  stringType = true;
   while (!doneTyping) {
-    if (keyCode == ENTER && name != "") {
-      doneTyping = true;
-    } else if (key != CODED) {
-      name += (char)(key);
-    }
+    noLoop();
   }
+  loop();
+  stringType = false;
   doneTyping = false;
-  println("Right! Your name is " + name + "!");
-  println(name + "! Your very own Pokemon legend is about to unfold! A world of dreams and adventures with Pokemon awaits! Let's go!");
+  println("Right! Your name is " + userStr + "!");
+  println(userStr + "! Your very own Pokemon legend is about to unfold! A world of dreams and adventures with Pokemon awaits! Let's go!");
   //End intro---------------
 
-  Player user = new Player(name);
-  Pokemon yourPokemon;
+  Player user = new Player(userStr);
 
   //Choose a Pokemon to add
   while (pokemonPicked == false) {
-    println("Now " + name + " , what Pokemon do you want?");
+    println("Now " + userStr + " , what Pokemon do you want?");
     println("\t1. Bulbasaur. A Grass and Poison type.");
     println("\t2. Charmander. A Fire type.");
     println("\t3. Squirtle. A Water type");
-
-    int choice = 0;  
+  
+    intType = true;
     while (!doneTyping) {
-      if (keyPressed) {
-
-        if (key >= '0' && key <= '9') {
-          choice = key - '0';
-          doneTyping = true;
-        }
-      }
+      noLoop();
     }
+    loop();
+    intType = false;
     doneTyping = false;
-    if (choice == 1) {
+    if (userInt == 1) {
       println("What name do you want to give to your Bulbasaur?");
-      String newName = "";
+      stringType = true;
+      userStr = "";
       while (!doneTyping) {
-        if (keyCode == ENTER && newName != "") {
-          doneTyping = true;
-        } else if (key != CODED) {
-          newName += (char)(key);
-        }
+        noLoop();
       }
+      loop();
+      stringType = false;
       doneTyping = false;
-      yourPokemon = new Bulbasaur(newName, 5);
+      yourPokemon = new Bulbasaur(userStr, 5);
       user.addPokemon(yourPokemon);
       pokemonPicked = true;
-    } else if (choice  == 2) {
+    } else if (userInt  == 2) {
       println("What name do you want to give to your Charmander?");
-      String newName = "";
+      stringType = true;
+      userStr = "";
       while (!doneTyping) {
-        if (keyCode == ENTER && newName != "") {
-          doneTyping = true;
-        } else if (key != CODED) {
-          newName += (char)(key);
-        }
+        noLoop();
       }
+      loop();
+      stringType = false;
       doneTyping = false;
-      yourPokemon = new Charmander(newName, 5);
+      yourPokemon = new Charmander(userStr, 5);
       user.addPokemon(yourPokemon);
       pokemonPicked = true;
-    } else if (choice == 3) {
+    } else if (userInt == 3) {
       println("What name do you want to give to your Squirtle?");
-      String newName = "";
+      stringType = true;
+      userStr = "";
       while (!doneTyping) {
-        if (keyCode == ENTER && newName != "") {
-          doneTyping = true;
-        } else if (key != CODED) {
-          newName += (char)(key);
-        }
+        noLoop();
       }
+      loop();
+      stringType = false;
       doneTyping = false;
-      yourPokemon = new Squirtle(newName, 5);
+      yourPokemon = new Squirtle(userStr, 5);
       user.addPokemon(yourPokemon);
       pokemonPicked = true;
     } else {
-      println("Invalid Choice.");
+      println("Invalid Choice." + userInt);
     }
   }
+  println("Cool! Your pokemon's name is " + yourPokemon.getName() + "! Welcome!");
+  noLoop();
 }
 /*
   //Pewter City Gym
@@ -169,3 +172,29 @@ void draw() {
  
  }
  */
+
+void keyPressed() {
+
+  if (stringType) {
+    if (keyCode == BACKSPACE) {
+      if (userStr.length() > 0) {
+        userStr = userStr.substring(0, userStr.length()-1);
+      }
+    } else if (keyCode == DELETE) {
+      userStr = "";
+    } else if (keyCode == ENTER) {
+      doneTyping = true;
+    } else if (keyCode != CODED) {
+      userStr += key;
+    }
+  } else if (intType) {
+
+    if (keyCode == DELETE) {
+      userInt = 0;
+    } else if (keyCode == ENTER) {
+      doneTyping = true;
+    } else if (key >= '0' && key <= '9') {
+      userInt = key - 48;
+    }
+  }
+}
