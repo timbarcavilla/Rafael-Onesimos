@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 abstract class Trainer {
 
   ArrayList<Pokemon> _party;
