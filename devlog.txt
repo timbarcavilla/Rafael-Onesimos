@@ -41,4 +41,4 @@ Allan continued to work on Driver File
 
 05/29/17
 
-Tim edited Pokemon, pokemon subclasses, driver
+Tim edited Pokemon, pokemon subclasses, driver, and rewrote driver file & mvp related files in processing.
