@@ -1,0 +1,8 @@
+Objective:
+
+1. Work on Battle Function (as of right now, print texts in terminal)
+
+2. Work on importing images & Graphics
+
+3. Convert necessary files into pde
+
