@@ -182,7 +182,7 @@ void keyPressed() {
       }
     } else if (keyCode == DELETE) {
       userStr = "";
-    } else if (keyCode == ENTER) {
+    } else if (keyCode == ENTER || keyCode == RETURN) {
       doneTyping = true;
     } else if (keyCode != CODED) {
       userStr += key;
@@ -191,7 +191,7 @@ void keyPressed() {
 
     if (keyCode == DELETE) {
       userInt = 0;
-    } else if (keyCode == ENTER) {
+    } else if (keyCode == ENTER || keyCode == RETURN) {
       doneTyping = true;
     } else if (key >= '0' && key <= '9') {
       userInt = key - 48;
