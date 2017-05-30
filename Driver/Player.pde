@@ -1,14 +1,14 @@
-import java.lang.ArrayPriorityQueue;
+import java.util.PriorityQueue;
 
-abstract class Player extends Trainer {
+class Player extends Trainer {
 
   int numBadges;
-  ArrayPriorityQueue<Pokemon> _pokedex; // Change type of pokedex
+  PriorityQueue<Pokemon> _pokedex; // Change type of pokedex
   boolean doneTyping;
 
   Player(String newName) {
     numBadges = 0;
-    _pokedex = new ArrayPriorityQueue<Pokemon>(); // Change type.
+    _pokedex = new PriorityQueue<Pokemon>(); // Change type.
     _name = newName;
     _party = new ArrayList<Pokemon>(); // Change this too.
     doneTyping = false;
@@ -42,12 +42,12 @@ abstract class Player extends Trainer {
     //if party is already full
     else {
       boolean pokeRemoved = false;
-      String remPokemon;
+      String remPokemon = "";
       System.out.print("What pokemon would you like to release back into the wild?");
       //show party
       showParty();
       while (!doneTyping) {
-        if (keyCode == ENTER && remPokemon != null) {
+        if (keyCode == ENTER && remPokemon != "") {
           doneTyping = true;
         } else if (key != CODED) {
           remPokemon += (char)(key);

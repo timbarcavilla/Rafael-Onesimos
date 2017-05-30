@@ -18,9 +18,9 @@ void draw() {
   //Intro-------------------
   println("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!");
   println("What is your name?");
-  String name;
+  String name = "";
   while (!doneTyping) {
-    if (keyCode == ENTER && name != null) {
+    if (keyCode == ENTER && name != "") {
       doneTyping = true;
     } else if (key != CODED) {
       name += (char)(key);
@@ -54,9 +54,9 @@ void draw() {
     doneTyping = false;
     if (choice == 1) {
       println("What name do you want to give to your Bulbasaur?");
-      String newName;
+      String newName = "";
       while (!doneTyping) {
-        if (keyCode == ENTER && newName != null) {
+        if (keyCode == ENTER && newName != "") {
           doneTyping = true;
         } else if (key != CODED) {
           newName += (char)(key);
@@ -64,12 +64,13 @@ void draw() {
       }
       doneTyping = false;
       yourPokemon = new Bulbasaur(newName, 5);
+      user.addPokemon(yourPokemon);
       pokemonPicked = true;
     } else if (choice  == 2) {
       println("What name do you want to give to your Charmander?");
-      String newName;
+      String newName = "";
       while (!doneTyping) {
-        if (keyCode == ENTER && newName != null) {
+        if (keyCode == ENTER && newName != "") {
           doneTyping = true;
         } else if (key != CODED) {
           newName += (char)(key);
@@ -77,12 +78,13 @@ void draw() {
       }
       doneTyping = false;
       yourPokemon = new Charmander(newName, 5);
+      user.addPokemon(yourPokemon);
       pokemonPicked = true;
     } else if (choice == 3) {
       println("What name do you want to give to your Squirtle?");
-      String newName;
+      String newName = "";
       while (!doneTyping) {
-        if (keyCode == ENTER && newName != null) {
+        if (keyCode == ENTER && newName != "") {
           doneTyping = true;
         } else if (key != CODED) {
           newName += (char)(key);
@@ -90,12 +92,12 @@ void draw() {
       }
       doneTyping = false;
       yourPokemon = new Squirtle(newName, 5);
+      user.addPokemon(yourPokemon);
       pokemonPicked = true;
     } else {
       println("Invalid Choice.");
     }
   }
-  user.addPokemon(yourPokemon);
 }
 /*
   //Pewter City Gym
