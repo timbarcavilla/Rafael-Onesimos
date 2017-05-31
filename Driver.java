@@ -110,6 +110,7 @@ public class Driver {
 	    if (Brock.hasPokemon()){
 		System.out.println("Brock: ur a loser");
 		user.healPokemon();
+		Brock.healPokemon();
 		//start over
 		continue;
 
