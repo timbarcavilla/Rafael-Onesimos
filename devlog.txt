@@ -42,3 +42,9 @@ Allan continued to work on Driver File
 05/29/17
 
 Tim edited Pokemon, pokemon subclasses, driver, and rewrote driver file & mvp related files in processing.
+
+05/30/17
+
+Tim converted more files into pde
+Eric started working on Writer
+Allan worked on how to implement battle
