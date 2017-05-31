@@ -1,0 +1,7 @@
+Objective:
+
+Continue work on Battle
+
+Work on images + graphics
+
+Converting files to Processing
