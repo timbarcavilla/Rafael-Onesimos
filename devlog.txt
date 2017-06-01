@@ -48,3 +48,9 @@ Tim edited Pokemon, pokemon subclasses, driver, and rewrote driver file & mvp re
 Tim converted more files into pde
 Eric started working on Writer
 Allan worked on how to implement battle
+
+05/31/17
+
+Tim added some display into Driver
+Eric continued working on Writer
+Allan continued working on Battle functions
