@@ -22,7 +22,7 @@ Graphics have not been developped yet but we are working on it.
 ```
 $ git@github.com:timbarcavilla/Rafael-Onesimos.git
 ```
-2. Install Processing 3 @ https://processing.org/download/
+2. Install Processing 3.3 @ https://processing.org/download/
 3. If you use Mac/Linux OS, open terminal and type:
 ```
 $ cd Rafael-Onesimos/Driver
