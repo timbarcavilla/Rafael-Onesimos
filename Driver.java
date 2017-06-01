@@ -127,15 +127,9 @@ public class Driver {
 
       }
 
+      //if your pokemon is still alive
       if (userPoke.getHp() > 0){
         System.out.println("Your Pokemon has " + userPoke.getHp() + " HP remaining.")
-      }
-      else {
-        System.out.println("Your Pokemon has 0 HP remaining.")
-      }
-
-      //if user's Pokemon is still alive
-      if (userPoke.getHp() > 0){
         if (userMove == 1){
           //print opponent used ____ move!
           //opponent used move on player (check move class pls)
@@ -155,15 +149,52 @@ public class Driver {
 
       }
 
-
-
-
+      if (userPoke.getSpeed() >= leaderPoke.getSpeed()){
+	  if (userMove == 1){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (userMove == 2){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (userMove == 3){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (userMove == 4){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
 	    }
+
+      //if leader pokemon is still alive
+      if (leaderPoke.getHp() > 0){
+	  System.out.println("Brock's Pokemon has " + leaderPoke.getHp() + " remaining.");
+	   oppMove = (int)(Math.random() * 4 + 1);
+        if (oppMove == 1){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (oppMove == 2){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (oppMove == 3){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (oppMove == 4){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+      }
+      
 
 	    if (user.hasPokemon()){
 
 		System.out.println("Brock: I took you for granted. As proof of your victory, here's the
-               BOULDERBADGE! That's an official POKEMON LEAGUE BADGE!
+               BOULDERBADGE! That is an official POKEMON LEAGUE BADGE!
                Its bearer's POKEMON become more powerful!");
 
 		//heal all pokemon
