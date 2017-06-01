@@ -35,19 +35,19 @@ public class Driver {
 		System.out.println("What name do you want to give to your Bulbasaur?");
 		String newName = Keyboard.readString();
 		yourPokemon = new Bulbasaur(newName,5);
-		pokemonPicked == true;
+		pokemonPicked = true;
 	    }
 	    else if (choice  == 2){
 		System.out.println("What name do you want to give to your Charmander?");
 		String newName = Keyboard.readString();
 		yourPokemon = new Charmander(newName,5);
-		pokemonPicked == true;
+		pokemonPicked = true;
 	    }
 	    else if (choice == 3){
 		System.out.println("What name do you want to give to your Squirtle?");
 		String newName = Keyboard.readString();
 		yourPokemon = new Squirtle(newName,5);
-		pokemonPicked == true;
+		pokemonPicked = true;
 	    }
 	    else{
 		System.out.println("Invalid Choice.");
@@ -76,7 +76,88 @@ public class Driver {
 
 	    //battle
 	    while (user.hasPokemon() && Brock.hasPokemon()){
-		//enter battle stuffs
+
+      //index of player party
+      int p = 0;
+      //index of leader party
+      int l = 0;
+      //choice of player move
+      int userMove = 0;
+      //choice of opponent move
+      int oppMove = 0;
+
+      boolean validMove = false;
+
+      Pokemon userPoke = user._party.get(0);
+      Pokemon leaderPoke = Brock._party.get(0);
+
+      //ask user to put in integer until they input valid input
+      while (!validMove){
+        userMove = Keyboard.readInt();
+
+        if (playerMove >= 1 && playerMove <= 4)   {
+          if (userMove != 5 || user.hasPokemon()){
+            validMove = true;
+          }
+        }
+
+        else {
+          System.out.println("Please input an integer between 1-4 corresponding with the move you want to use.")
+        }
+      }
+
+      if (leaderPoke.getSpeed() > userPoke.getSpeed()){
+        oppMove = (int)(Math.random() * 4 + 1);
+        if (oppMove == 1){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (oppMove == 2){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (oppMove == 3){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (oppMove == 4){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+
+      }
+
+      if (userPoke.getHp() > 0){
+        System.out.println("Your Pokemon has " + userPoke.getHp() + " HP remaining.")
+      }
+      else {
+        System.out.println("Your Pokemon has 0 HP remaining.")
+      }
+
+      //if user's Pokemon is still alive
+      if (userPoke.getHp() > 0){
+        if (userMove == 1){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (userMove == 2){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (userMove == 3){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+        if (userMove == 4){
+          //print opponent used ____ move!
+          //opponent used move on player (check move class pls)
+        }
+
+      }
+
+
+
+
 	    }
 
 	    if (user.hasPokemon()){
@@ -110,6 +191,7 @@ public class Driver {
 	    if (Brock.hasPokemon()){
 		System.out.println("Brock: ur a loser");
 		user.healPokemon();
+		Brock.healPokemon();
 		//start over
 		continue;
 
