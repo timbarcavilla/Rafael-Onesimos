@@ -13,22 +13,27 @@ Pokemon yourPokemon;
 String userStr = "";
 int userInt = 0;
 
+PFont f;
+
 void setup() {
-  size(600, 600);
+  size(200, 200);
   pokemonPicked = false;
   badgeWon = false;
   puzzleSolved = false;
   doneTyping = false;
   stringType = false;
   intType = false;
+  f = createFont("Arial",16,true);
 }
 
 void draw() {
 
-  background(0);
+  background(255);
   //Intro-------------------
-  println("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!");
-  println("What is your name?");
+  textFont(f,16);
+  fill(0);
+  text("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!",10,100);
+  text("What is your name?",30,100);
   stringType = true;
   while (!doneTyping) {
     noLoop();
