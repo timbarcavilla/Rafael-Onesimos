@@ -12,4 +12,21 @@ class Leader extends Trainer {
   void addPokemon(Pokemon p) {
     _party.add(p);
   }
+
+  boolean hasPokemon() {
+
+    for (Pokemon p : _party) {
+      if (p.getHealth() > 0) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  void healPokemon(){
+    for (Pokemon p : _party){
+      p.heal();
+    }
+  }
+  
 }

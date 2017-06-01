@@ -18,8 +18,15 @@ Graphics have not been developped yet but we are working on it.
 
 ### How do I play?
 
-1. Clone this repo
-2. If you have not installed processing, install it.
-3. If you use Mac/Linux OS, open terminal, go to the repo, and type "processing Driver/Driver.pde".
+1. Clone this repo in terminal
+```
+$ git@github.com:timbarcavilla/Rafael-Onesimos.git
+```
+2. Install Processing 3 @ https://processing.org/download/
+3. If you use Mac/Linux OS, open terminal and type:
+```
+$ cd Rafael-Onesimos/Driver
+$ processing Driver.pde &
+```
    If you use Windows, open processing.exe and click on "File"-->"Open" and go to Raphael-Onesimos/Driver/Driver.pde.
 4. Click run
