@@ -148,6 +148,9 @@ public class Driver {
         }
 
       }
+      else {
+	  //player fainted
+      }
 
       if (userPoke.getSpeed() >= leaderPoke.getSpeed()){
 	  if (userMove == 1){
@@ -189,6 +192,11 @@ public class Driver {
           //opponent used move on player (check move class pls)
         }
       }
+
+      else {
+	  //leader fainted
+      }
+
       
 
 	    if (user.hasPokemon()){
@@ -199,7 +207,7 @@ public class Driver {
 
 		//heal all pokemon
 		user.healPokemon();
-		System.outprintln("All your Pokemon have been healed.");
+		System.out.println("All your Pokemon have been healed.");
 
 		//add pokemon
 		System.out.println("Choose a Pokemon to add to your party!")
