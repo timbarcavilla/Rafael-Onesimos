@@ -1,0 +1,7 @@
+Objectives:
+
+1. Continue working on Battle function
+
+2. COntinue working on Driver displays (for what we have right now)
+
+3. Adding more images and graphics
