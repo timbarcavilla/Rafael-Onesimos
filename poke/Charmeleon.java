@@ -1,17 +1,17 @@
-class Charmander extends Pokemon {
+class Charmeleon extends Pokemon {
 
-    Charmander(String newName, int newLvl) {
+    Charmeleon(String newName, int newLvl) {
 
         _name = newName;
-        _index = 4;
+        _index = 5;
         _lvl = newLvl;
         // _moveset = [INSERT MOVESET HERE];
-        _hp = 39;
-        _atk = 52;
-        _def = 43;
-        _spatk = 60;
-        _spdef = 50;
-        _speed = 65;
+        _hp = 58;
+        _atk = 64;
+        _def = 58;
+        _spatk = 80;
+        _spdef = 65;
+        _speed = 80;
         _type1 = 2;
         _type2 = 0;
         atk1 = new Move(  );
@@ -19,8 +19,8 @@ class Charmander extends Pokemon {
         atk3 = new Move(  );
         atk4 = null;
         hasEvo = TRUE;
-        evoLvl = 16;
-        evoTo = 5;
+        evoLvl = 36;
+        evoTo = 6;
     }
 
 }

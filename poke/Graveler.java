@@ -1,17 +1,17 @@
-class Geodude extends Pokemon {
+class Graveler extends Pokemon {
 
-    Geodude(String newName, int newLvl) {
+    Graveler(String newName, int newLvl) {
 
         _name = newName;
-        _index = 74;
+        _index = 75;
         _lvl = newLvl;
         // _moveset = [INSERT MOVESET HERE];
-        _hp = 40;
-        _atk = 80;
-        _def = 100;
-        _spatk = 30;
-        _spdef = 30;
-        _speed = 20;
+        _hp = 55;
+        _atk = 95;
+        _def = 115;
+        _spatk = 45;
+        _spdef = 45;
+        _speed = 35;
         _type1 = 13;
         _type2 = 5;
         atk1 = new Move(  );
@@ -19,7 +19,7 @@ class Geodude extends Pokemon {
         atk3 = new Move(  );
         atk4 = null;
         hasEvo = TRUE;
-        evoLvl = 25;
+        evoLvl = 40;
         evoTo = 75;
     }
 

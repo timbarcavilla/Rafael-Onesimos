@@ -1,17 +1,17 @@
-class Squirtle extends Pokemon {
+class Magikarp extends Pokemon {
 
-    Squirtle(String newName, int newLvl) {
+    Magikarp(String newName, int newLvl) {
 
         _name = newName;
-        _index = 7;
+        _index = 129;
         _lvl = newLvl;
         // _moveset = [INSERT MOVESET HERE];
-        _hp = 44;
-        _atk = 48;
-        _def = 65;
-        _spatk = 60;
-        _spdef = 54;
-        _speed = 43;
+        _hp = 20;
+        _atk = 10;
+        _def = 55;
+        _spatk = 15;
+        _spdef = 20;
+        _speed = 80;
         _type1 = 4;
         _type2 = 0;
         atk1 = new Move(  );
@@ -19,8 +19,8 @@ class Squirtle extends Pokemon {
         atk3 = new Move(  );
         atk4 = null;
         hasEvo = TRUE;
-        evoLvl = 16;
-        evoTo = 8;
+        evoLvl = 20;
+        evoTo = 130;
     }
 
 }

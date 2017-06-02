@@ -3,14 +3,15 @@ abstract class Pokemon {
   final String[] types = { "NONE", "NORMAL", "FIRE", "GRASS", "WATER", "GROUND", "ELECTRIC", "ICE", "FIGHTING", "POISON", "FLYING", "PSYCHIC", "BUG", "ROCK", "GHOST", "DRAGON" };
 
   // Classification
-  int _index;
-  String _name;
-  String _type1;
-  String _type2;
-  int _lvl;
-  int _exp;
-  boolean hasEvo;
-  int evoLvl;
+  int _index; // national pokedex index number
+  String _name; // name/nickname of pokemon
+  String _type1; // primary type
+  String _type2; // secondary type
+  int _lvl; // level, based on exp
+  int _exp; // experience points
+  boolean hasEvo; // boolean for if the pokemon has a next evolution
+  int evoLvl; // level in which this pokemon evolves, if hasEvo is true
+  int evoTo; // index of next pokemon in evolution tree
 
   // Base Stats
   int _hp;
@@ -21,7 +22,7 @@ abstract class Pokemon {
   int _speed;
 
   // Battle Stats
-  int _health;
+  int _health; // different from _hp bc this is editted in battle, _hp is the stat itself.
 
   // Moves
   Move atk1;
@@ -169,7 +170,7 @@ abstract class Pokemon {
   }
 
   void levelUp() {
-    _hp += 4;
+    _hp += 3;
     _atk += 2;
     _def += 2;
     _spatk += 2;
@@ -182,7 +183,7 @@ abstract class Pokemon {
   void evolve() {
 
     if ( hasEvo == true && _lvl == evoLvl) {
-      _index += 1;
+      _index += evoTo;
     }
   }
 

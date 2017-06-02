@@ -1,17 +1,17 @@
-class Charmander extends Pokemon {
+class Growlithe extends Pokemon {
 
-    Charmander(String newName, int newLvl) {
+    Growlithe(String newName, int newLvl) {
 
         _name = newName;
-        _index = 4;
+        _index = 58;
         _lvl = newLvl;
         // _moveset = [INSERT MOVESET HERE];
-        _hp = 39;
-        _atk = 52;
-        _def = 43;
-        _spatk = 60;
+        _hp = 55;
+        _atk = 70;
+        _def = 45;
+        _spatk = 70;
         _spdef = 50;
-        _speed = 65;
+        _speed = 60;
         _type1 = 2;
         _type2 = 0;
         atk1 = new Move(  );
@@ -19,8 +19,8 @@ class Charmander extends Pokemon {
         atk3 = new Move(  );
         atk4 = null;
         hasEvo = TRUE;
-        evoLvl = 16;
-        evoTo = 5;
+        evoLvl = 30;
+        evoTo = 59;
     }
 
 }
