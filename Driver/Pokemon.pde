@@ -5,8 +5,8 @@ abstract class Pokemon {
   // Classification
   int _index; // national pokedex index number
   String _name; // name/nickname of pokemon
-  String _type1; // primary type
-  String _type2; // secondary type
+  int _type1; // primary type
+  int _type2; // secondary type
   int _lvl; // level, based on exp
   int _exp; // experience points
   boolean hasEvo; // boolean for if the pokemon has a next evolution

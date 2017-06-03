@@ -14,9 +14,9 @@ class Arcanine extends Pokemon {
     _speed = 95;
     _type1 = 2;
     _type2 = 0;
-    atk1 = new Move(  );
-    atk2 = new Move(  );
-    atk3 = new Move(  );
+    atk1 = new Move();
+    atk2 = new Move();
+    atk3 = new Move();
     atk4 = null;
     hasEvo = FALSE;
     evoLvl = -1;
