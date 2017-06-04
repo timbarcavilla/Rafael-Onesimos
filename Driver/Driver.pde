@@ -32,11 +32,8 @@ void draw() {
 
   background(255);
   //Intro-------------------
-  textFont(f,16);
-  fill(0);
-  text("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!",10,100,300,300);
-  text("What is your name?",30,300);
-  frameRate(3);
+  println("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!");
+  println("What is your name?",30,300);
   stringType = true;
   while (!doneTyping) {
     noLoop();
