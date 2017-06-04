@@ -1,3 +1,4 @@
+PImage center;
 
 boolean pokemonPicked;
 boolean badgeWon;
@@ -8,6 +9,7 @@ boolean doneTyping;
 boolean stringType;
 boolean intType;
 boolean dialogue;
+boolean buttonClicked;
 
 Pokemon yourPokemon;
 
@@ -15,9 +17,14 @@ String userStr = "";
 int userInt = 0;
 
 PFont f;
+int rectX,rectY,rectSizeX,rectSizeY;
+color rectC;
+
+Map maps;
 
 void setup() {
   size(600, 600);
+  center = loadImage("center.png");
   pokemonPicked = false;
   badgeWon = false;
   puzzleSolved = false;
@@ -25,15 +32,39 @@ void setup() {
   stringType = false;
   intType = false;
   dialogue = false;
-  f = createFont("Arial",16,true);
+  buttonClicked = false;
+  f = createFont("Times New Roman",16,true);
+  rectX = 200;
+  rectY = 100;
+  rectSizeX = 200;
+  rectSizeY = 100;
+  rectC = 0;
+  maps = new Map();
 }
 
+void menu(){
+  background(0);
+  fill(rectC);
+  stroke(255);
+  rect(rectX,rectY,rectSizeX,rectSizeY);
+  fill(255);
+  text("PLAY",280,150);
+  while (!buttonClicked){
+    noLoop();/*
+    if (mouseX >= 200 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200){
+      noStroke();
+    }
+    */
+  }
+}
 void draw() {
-
-  background(255);
+  menu();
+  background(0);
+  load(maps.map1);
   //Intro-------------------
   println("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!");
-  println("What is your name?",30,300);
+  println("What is your name?");
+  /*
   stringType = true;
   while (!doneTyping) {
     noLoop();
@@ -106,9 +137,25 @@ void draw() {
   }
   println("Cool! Your pokemon's name is " + yourPokemon.getName() + "! Welcome!");
   noLoop();
-  
+  */
 }
 
+void load(int[][] stuff){
+  for (int x = 0; x< stuff.length; x++){
+    for (int y = 0; y< stuff[0].length; y++){
+      if (stuff[x][y] == 0){
+          stroke(164);
+          point(x,y);
+      }
+    }
+  }
+  image(center,100,100);
+}
+void mousePressed(){
+  if (mouseX >= 200 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200){
+    buttonClicked = true;
+  }
+}
 
 void keyPressed() {
 

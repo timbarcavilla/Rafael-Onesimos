@@ -1,6 +1,6 @@
 abstract class Pokemon {
 
-  final String[] types = { "NONE", "NORMAL", "FIRE", "GRASS", "WATER", "GROUND", "ELECTRIC", "ICE", "FIGHTING", "POISON", "FLYING", "PSYCHIC", "BUG", "ROCK", "GHOST", "DRAGON" };
+  final String[] types = { "NORMAL", "FIRE", "GRASS", "WATER", "GROUND", "ELECTRIC", "ICE", "FIGHTING", "POISON", "FLYING", "PSYCHIC", "BUG", "ROCK", "GHOST", "DRAGON" };
 
   // Classification
   int _index; // national pokedex index number
@@ -39,10 +39,10 @@ abstract class Pokemon {
     return _name;
   }
   String getType1() { 
-    return _type1;
+    return types[_type1];
   }
   String getType2() { 
-    return _type2;
+    return types[_type2];
   }
   int getLevel() { 
     return _lvl;
@@ -107,14 +107,14 @@ abstract class Pokemon {
     return s;
   }
 
-  String setType1( String newType ) {
-    String s = _type1;
+  String setType1( int newType ) {
+    String s = getType1();
     _type1 = newType;
     return s;
   }
 
-  String setType2( String newType ) {
-    String s = _type2;
+  String setType2( int newType ) {
+    String s = getType2();
     _type2 = newType;
     return s;
   }

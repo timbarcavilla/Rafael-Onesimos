@@ -14,11 +14,11 @@ class Squirtle extends Pokemon {
     _speed = 43;
     _type1 = 4;
     _type2 = 0;
-    atk1 = new Move(  );
-    atk2 = new Move(  );
-    atk3 = new Move(  );
+    atk1 = new Move( "Tackle",35,40,100,0,2,0 );
+    atk2 = new Move( "Water Pulse",20,60,100,1,5,0 );
+    atk3 = new Move( "Bubble",30,40,100,1,5,0 );
     atk4 = null;
-    hasEvo = TRUE;
+    hasEvo = true;
     evoLvl = 16;
     evoTo = 8;
   }
