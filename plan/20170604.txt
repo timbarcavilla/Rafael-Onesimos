@@ -1,0 +1,7 @@
+Objectives:
+
+1. Finish up Pokemons
+
+2. Work on maps 
+
+3. Work on various display functions
