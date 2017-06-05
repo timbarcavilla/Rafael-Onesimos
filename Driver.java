@@ -87,6 +87,8 @@ public class Driver {
       int oppMove = 0;
 
       boolean validMove = false;
+      boolean userFainted = false;
+      boolean oppFainted = false;
 
       Pokemon userPoke = user._party.get(0);
       Pokemon leaderPoke = Brock._party.get(0);
