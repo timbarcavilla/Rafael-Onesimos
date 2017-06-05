@@ -2,6 +2,7 @@ PImage center;
 PImage dGrass;
 PImage pt;
 PImage gy;
+PImage ch;
 
 boolean pokemonPicked;
 boolean puzzleSolved;
@@ -10,12 +11,13 @@ boolean doneTyping;
 
 boolean stringType;
 boolean intType;
-boolean dialogue;
+boolean canMove;
 boolean buttonClicked;
 
 Map m1,m2,m3;
 
 Pokemon yourPokemon;
+Player user;
 
 String userStr = "";
 int userInt = 0;
@@ -28,6 +30,7 @@ Map maps;
 
 void setup() {
   size(600, 600);
+  ch = loadImage("player.png");
   center = loadImage("center.png");
   dGrass = loadImage("darkgrass.jpg");
   pt = loadImage("path.jpg");
@@ -37,7 +40,7 @@ void setup() {
   doneTyping = false;
   stringType = false;
   intType = false;
-  dialogue = false;
+  canMove = false;
   buttonClicked = false;
   f = createFont("Times New Roman",16,true);
   rectX = 200;
@@ -71,7 +74,7 @@ void draw() {
   println("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!");
   println("What is your name?");
   m1.display();
-  /*
+  
   stringType = true;
   while (!doneTyping) {
     noLoop();
@@ -83,8 +86,10 @@ void draw() {
   println(userStr + "! Your very own Pokemon legend is about to unfold! A world of dreams and adventures with Pokemon awaits! Let's go!");
   //End intro---------------
 
-  Player user = new Player(userStr);
-
+  user = new Player(userStr,300,580);
+  user.display();
+  canMove = true;
+/*
   //Choose a Pokemon to add
   while (pokemonPicked == false) {
     println("Now " + userStr + " , what Pokemon do you want?");
@@ -190,9 +195,18 @@ void keyPressed() {
       userInt = key - 48;
     }
   }
-  else if (dialogue){
-    if (keyCode == ENTER){
-      dialogue = false;
+  else if (canMove){
+    if (keyCode == UP){
+      user.moveUp();
+    }
+    else if (keyCode == DOWN){
+      user.moveDown();
+    }
+    else if (keyCode == LEFT){
+      user.moveLeft();
+    }
+    else if (keyCode == RIGHT){
+      user.moveRight();
     }
   }
 }

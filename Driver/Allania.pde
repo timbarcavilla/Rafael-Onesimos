@@ -1,7 +1,7 @@
 class Allania extends Map{
   
   Allania(){
-    exitX = 100;
+    exitX = 300;
     exitY = 0;
     gymX1 = 400;
     gymX2 = 500;

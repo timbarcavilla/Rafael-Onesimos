@@ -5,13 +5,16 @@ class Player extends Trainer {
   int numBadges;
   PriorityQueue<Pokemon> _pokedex; // Change type of pokedex
   boolean doneTyping;
+  int x,y;
 
-  Player(String newName) {
+  Player(String newName,int xcor,int ycor) {
     numBadges = 0;
     _pokedex = new PriorityQueue<Pokemon>(); // Change type.
     _name = newName;
     _party = new ArrayList<Pokemon>(); // Change this too.
     doneTyping = false;
+    x = xcor;
+    y = ycor;
   }
 
   // ACCESSORS AND MUTATORS
@@ -98,5 +101,25 @@ class Player extends Trainer {
 
   void showParty() {
     println(_party.toString());
+  }
+  
+  void moveUp(){
+    y-=30;
+  }
+  
+  void moveDown(){
+    y+=30;
+  }
+  
+  void moveLeft(){
+    x-=30;
+  }
+  
+  void moveRight(){
+    x+=30;
+  }
+  
+  void display(){
+    image(ch,x,y);
   }
 }
