@@ -1,7 +1,9 @@
 PImage center;
+PImage dGrass;
+PImage pt;
+PImage gy;
 
 boolean pokemonPicked;
-boolean badgeWon;
 boolean puzzleSolved;
 
 boolean doneTyping;
@@ -10,6 +12,8 @@ boolean stringType;
 boolean intType;
 boolean dialogue;
 boolean buttonClicked;
+
+Map m1,m2,m3;
 
 Pokemon yourPokemon;
 
@@ -25,8 +29,10 @@ Map maps;
 void setup() {
   size(600, 600);
   center = loadImage("center.png");
+  dGrass = loadImage("darkgrass.jpg");
+  pt = loadImage("path.jpg");
+  gy = loadImage("gym.jpg");
   pokemonPicked = false;
-  badgeWon = false;
   puzzleSolved = false;
   doneTyping = false;
   stringType = false;
@@ -39,7 +45,8 @@ void setup() {
   rectSizeX = 200;
   rectSizeY = 100;
   rectC = 0;
-  maps = new Map();
+  
+  m1 = new Allania();
 }
 
 void menu(){
@@ -60,10 +67,10 @@ void menu(){
 void draw() {
   menu();
   background(0);
-  load(maps.map1);
   //Intro-------------------
   println("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!");
   println("What is your name?");
+  m1.display();
   /*
   stringType = true;
   while (!doneTyping) {
@@ -141,15 +148,17 @@ void draw() {
 }
 
 void load(int[][] stuff){
-  for (int x = 0; x< stuff.length; x++){
-    for (int y = 0; y< stuff[0].length; y++){
+  for (int x = 0; x< stuff.length; x+=30){
+    for (int y = 0; y< stuff[0].length; y+=30){
       if (stuff[x][y] == 0){
-          stroke(164);
-          point(x,y);
+        Path p = new Path(x,y);
+        p.display();
       }
     }
   }
   image(center,100,100);
+  DarkGrass d1 = new DarkGrass(400,200);
+  d1.display();
 }
 void mousePressed(){
   if (mouseX >= 200 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200){
