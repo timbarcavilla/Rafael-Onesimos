@@ -153,6 +153,8 @@ public class Driver {
       else {
 	  //player fainted
       }
+      //  if (opp fainted)
+	  
 
       if (userPoke.getSpeed() >= leaderPoke.getSpeed()){
 	  if (userMove == 1){
@@ -199,6 +201,9 @@ public class Driver {
 	  //leader fainted
       }
 
+      //if (user fainted)
+
+      //if player fainted, get next pokemon???
       
 
 	    if (user.hasPokemon()){
