@@ -1,0 +1,21 @@
+Objective:
+
+1. Finish Main Menu
+
+2. Have Battle function installed in gym and dark grass
+
+3. Get the player to move properly
+
+4. Adjust size to make it look better
+
+5. Make two more cities
+
+6. Finish editing pokemon
+
+7. Puzzle (if time)
+
+DONE MVP
+
+Extra:
+
+Shop, catching, evolution, etc.
