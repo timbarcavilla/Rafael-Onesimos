@@ -2,7 +2,6 @@ PImage center;
 PImage dGrass;
 PImage pt;
 PImage gy;
-PImage ch;
 
 boolean pokemonPicked;
 boolean puzzleSolved;
@@ -13,6 +12,7 @@ boolean stringType;
 boolean intType;
 boolean canMove;
 boolean buttonClicked;
+boolean doneIntro;
 
 Map m1,m2,m3;
 
@@ -30,7 +30,6 @@ Map maps;
 
 void setup() {
   size(600, 600);
-  ch = loadImage("player.png");
   center = loadImage("center.png");
   dGrass = loadImage("darkgrass.jpg");
   pt = loadImage("path.jpg");
@@ -42,6 +41,7 @@ void setup() {
   intType = false;
   canMove = false;
   buttonClicked = false;
+  doneIntro = false;
   f = createFont("Times New Roman",16,true);
   rectX = 200;
   rectY = 100;
@@ -67,9 +67,38 @@ void menu(){
     */
   }
 }
+
+void intro(){
+  println("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!");
+  println("What is your name?");
+  
+  stringType = true;
+  while (!doneTyping) {
+    noLoop();
+  }
+  loop();
+  stringType = false;
+  doneTyping = false;
+  
+  println("Right! Your name is " + userStr + "!");
+  println(userStr + "! Your very own Pokemon legend is about to unfold! A world of dreams and adventures with Pokemon awaits! Let's go!");
+  //End intro---------------
+
+  user = new Player(userStr,300,580,30);
+  doneIntro = true;
+}
 void draw() {
-  menu();
-  background(0);
+  while(!buttonClicked){
+    menu();
+  }
+  m1.display();
+  while (!doneIntro){
+    intro();
+  }
+  canMove = true;
+  user.move();
+  user.display();
+  /*
   //Intro-------------------
   println("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!");
   println("What is your name?");
@@ -82,13 +111,16 @@ void draw() {
   loop();
   stringType = false;
   doneTyping = false;
+  
   println("Right! Your name is " + userStr + "!");
   println(userStr + "! Your very own Pokemon legend is about to unfold! A world of dreams and adventures with Pokemon awaits! Let's go!");
   //End intro---------------
 
-  user = new Player(userStr,300,580);
+  user = new Player(userStr,300,580,30);
+  user.move();
   user.display();
-  canMove = true;
+  */
+   
 /*
   //Choose a Pokemon to add
   while (pokemonPicked == false) {
@@ -152,19 +184,6 @@ void draw() {
   */
 }
 
-void load(int[][] stuff){
-  for (int x = 0; x< stuff.length; x+=30){
-    for (int y = 0; y< stuff[0].length; y+=30){
-      if (stuff[x][y] == 0){
-        Path p = new Path(x,y);
-        p.display();
-      }
-    }
-  }
-  image(center,100,100);
-  DarkGrass d1 = new DarkGrass(400,200);
-  d1.display();
-}
 void mousePressed(){
   if (mouseX >= 200 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200){
     buttonClicked = true;
@@ -196,17 +215,12 @@ void keyPressed() {
     }
   }
   else if (canMove){
-    if (keyCode == UP){
-      user.moveUp();
-    }
-    else if (keyCode == DOWN){
-      user.moveDown();
-    }
-    else if (keyCode == LEFT){
-      user.moveLeft();
-    }
-    else if (keyCode == RIGHT){
-      user.moveRight();
-    }
+   user.setMove(keyCode,true);
+  }
+}
+
+void keyReleased(){
+  if (canMove){
+  user.setMove(keyCode,false);
   }
 }

@@ -4,10 +4,10 @@ class Player extends Trainer {
 
   int numBadges;
   PriorityQueue<Pokemon> _pokedex; // Change type of pokedex
-  boolean doneTyping;
-  int x,y;
+  boolean doneTyping, goUp, goDown, goLeft, goRight;
+  int x, y, d;
 
-  Player(String newName,int xcor,int ycor) {
+  Player(String newName, int xcor, int ycor, int diameter) {
     numBadges = 0;
     _pokedex = new PriorityQueue<Pokemon>(); // Change type.
     _name = newName;
@@ -15,6 +15,7 @@ class Player extends Trainer {
     doneTyping = false;
     x = xcor;
     y = ycor;
+    d = diameter;
   }
 
   // ACCESSORS AND MUTATORS
@@ -102,24 +103,40 @@ class Player extends Trainer {
   void showParty() {
     println(_party.toString());
   }
-  
-  void moveUp(){
-    y-=30;
+
+  void display() {
+    fill(#16E6F0);
+    ellipse(x, y, d, d);
   }
-  
-  void moveDown(){
-    y+=30;
+
+  int convert(boolean boo) {
+    if (boo) {
+      return 1;
+    }
+    return 0;
   }
-  
-  void moveLeft(){
-    x-=30;
+
+  void move() {
+
+    x = constrain(x+10*(convert(goRight)-convert(goLeft)), d/2, width-(d/2));
+    y = constrain(y+10*(convert(goDown)-convert(goUp)), d/2, width-(d/2));
   }
-  
-  void moveRight(){
-    x+=30;
-  }
-  
-  void display(){
-    image(ch,x,y);
+
+  boolean setMove(int board, boolean boo) {
+
+    if (board == 'W') {
+      goUp = boo;
+      return goUp;
+    } else if (board == 'S') {
+      goDown = boo;
+      return goDown;
+    } else if (board == 'A') {
+      goLeft = boo;
+      return goLeft;
+    } else if (board =='D') {
+      goRight = boo;
+      return goRight;
+    }
+    return boo;
   }
 }
