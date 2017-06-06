@@ -77,18 +77,19 @@ public class Driver {
 	    //battle
 	    while (user.hasPokemon() && Brock.hasPokemon()){
 
-      //index of player party
-      int p = 0;
-      //index of leader party
-      int l = 0;
-      //choice of player move
-      int userMove = 0;
-      //choice of opponent move
-      int oppMove = 0;
+        //index of player party
+        int p = 0;
+        //index of leader party
+        int l = 0;
+        //choice of player move
+        int userMove = 0;
+        //choice of opponent move
+        int oppMove = 0;
+
+        boolean userFainted = false;
+        boolean oppFainted = false;
 
       boolean validMove = false;
-      boolean userFainted = false;
-      boolean oppFainted = false;
 
       Pokemon userPoke = user._party.get(0);
       Pokemon leaderPoke = Brock._party.get(0);
@@ -111,20 +112,36 @@ public class Driver {
       if (leaderPoke.getSpeed() > userPoke.getSpeed()){
         oppMove = (int)(Math.random() * 4 + 1);
         if (oppMove == 1){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (leaderPoke.atk1().equals(null)){
+            oppMove = (int)(Math.random() * 4 + 1);
+          }
+          else {
+            leaderPoke.atk1( userPoke );
+          }
         }
         if (oppMove == 2){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (leaderPoke.atk2().equals(null)){
+            oppMove = (int)(Math.random() * 4 + 1);
+          }
+          else {
+            leaderPoke.atk2( userPoke );
+          }
         }
         if (oppMove == 3){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (leaderPoke.atk3().equals(null)){
+            oppMove = (int)(Math.random() * 4 + 1);
+          }
+          else {
+            leaderPoke.atk3( userPoke );
+          }
         }
         if (oppMove == 4){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (leaderPoke.atk4().equals(null)){
+            oppMove = (int)(Math.random() * 4 + 1);
+          }
+          else {
+            leaderPoke.atk4( userPoke );
+          }
         }
 
       }
@@ -133,45 +150,83 @@ public class Driver {
       if (userPoke.getHp() > 0){
         System.out.println("Your Pokemon has " + userPoke.getHp() + " HP remaining.")
         if (userMove == 1){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (userPoke.atk1().equals(null)){
+            System.out.println("Pick another move.")
+          }
+          else {
+            userPoke.atk1( userPoke );
+          }
         }
         if (userMove == 2){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (userPoke.atk2().equals(null)){
+            System.out.println("Pick another move.")
+          }
+          else {
+            userPoke.atk2( userPoke );
+          }
         }
         if (userMove == 3){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (userPoke.atk3().equals(null)){
+            System.out.println("Pick another move.")
+          }
+          else {
+            userPoke.atk3( userPoke );
+          }
         }
         if (userMove == 4){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (userPoke.atk4().equals(null)){
+            System.out.println("Pick another move.")
+          }
+          else {
+            userPoke.atk4( userPoke );
+          }
         }
 
       }
       else {
-	  //player fainted
+        //player pokemon fainted
+	       userFainted = true;
+
       }
-      //  if (opp fainted)
-	  
+      if (leaderPoke.getHp() <= 0){
+        //brock pokemon fainted
+        oppFainted = true;
+
+      }
+
 
       if (userPoke.getSpeed() >= leaderPoke.getSpeed()){
 	  if (userMove == 1){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+      if (userPoke.atk1().equals(null)){
+        System.out.println("Pick another move.")
+      }
+      else {
+        userPoke.atk1( userPoke );
+      }
         }
         if (userMove == 2){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (userPoke.atk2().equals(null)){
+            System.out.println("Pick another move.")
+          }
+          else {
+            userPoke.atk2( userPoke );
+          }
         }
         if (userMove == 3){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (userPoke.atk3().equals(null)){
+            System.out.println("Pick another move.")
+          }
+          else {
+            userPoke.atk3( userPoke );
+          }
         }
         if (userMove == 4){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (userPoke.atk4().equals(null)){
+            System.out.println("Pick another move.")
+          }
+          else {
+            userPoke.atk4( userPoke );
+          }
         }
 	    }
 
@@ -180,31 +235,55 @@ public class Driver {
 	  System.out.println("Brock's Pokemon has " + leaderPoke.getHp() + " remaining.");
 	   oppMove = (int)(Math.random() * 4 + 1);
         if (oppMove == 1){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (leaderPoke.atk1().equals(null)){
+            oppMove = (int)(Math.random() * 4 + 1);
+          }
+          else {
+            leaderPoke.atk1( userPoke );
+          }
         }
         if (oppMove == 2){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (leaderPoke.atk2().equals(null)){
+            oppMove = (int)(Math.random() * 4 + 1);
+          }
+          else {
+            leaderPoke.atk2( userPoke );
+          }
         }
         if (oppMove == 3){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (leaderPoke.atk3().equals(null)){
+            oppMove = (int)(Math.random() * 4 + 1);
+          }
+          else {
+            leaderPoke.atk3( userPoke );
+          }
         }
         if (oppMove == 4){
-          //print opponent used ____ move!
-          //opponent used move on player (check move class pls)
+          if (leaderPoke.atk4().equals(null)){
+            oppMove = (int)(Math.random() * 4 + 1);
+          }
+          else {
+            leaderPoke.atk4( userPoke );
+          }
         }
       }
 
       else {
-	  //leader fainted
+	  //brock's pokemon fainted
+
+    oppFainted = true;
+
       }
 
-      //if (user fainted)
+      //if user's pokemon fainted
+      if (userPoke.getHp() <= 0){
 
-      //if player fainted, get next pokemon???
-      
+      userFainted = false;
+
+      }
+
+
+
 
 	    if (user.hasPokemon()){
 
