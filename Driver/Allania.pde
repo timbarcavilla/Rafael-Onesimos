@@ -35,7 +35,7 @@ class Allania extends Map{
   }
   
   void setCenter(){
-    Center ce = new Center(150,450);
+    Center ce = new Center(130,420);
     ce.display();
   }
   

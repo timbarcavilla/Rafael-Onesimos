@@ -124,16 +124,16 @@ class Player extends Trainer {
 
   boolean setMove(int board, boolean boo) {
 
-    if (board == 'W') {
+    if (board == 'W' || board == UP) {
       goUp = boo;
       return goUp;
-    } else if (board == 'S') {
+    } else if (board == 'S' || board == DOWN) {
       goDown = boo;
       return goDown;
-    } else if (board == 'A') {
+    } else if (board == 'A' || board == LEFT) {
       goLeft = boo;
       return goLeft;
-    } else if (board =='D') {
+    } else if (board == 'D' || board == RIGHT) {
       goRight = boo;
       return goRight;
     }

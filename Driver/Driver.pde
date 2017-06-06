@@ -29,7 +29,7 @@ color rectC;
 Map maps;
 
 void setup() {
-  size(600, 600);
+  size(1200, 1200);
   center = loadImage("center.png");
   dGrass = loadImage("darkgrass.jpg");
   pt = loadImage("path.jpg");
