@@ -5,6 +5,7 @@ abstract class Map{
   int centerX1,centerY1,centerX2,centerY2;
   int gymlvl;
   Exit ex1,ex2;
+  Center c;
   
   abstract void setPath();
   abstract void setBackground();

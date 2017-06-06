@@ -7,6 +7,7 @@ class Charmander extends Pokemon {
     _lvl = newLvl;
     // _moveset = [INSERT MOVESET HERE];
     _hp = 39;
+    _health = _hp;
     _atk = 52;
     _def = 43;
     _spatk = 60;

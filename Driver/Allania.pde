@@ -13,6 +13,8 @@ class Allania extends Map{
     centerY2 = 500;
     gymlvl = 1;
     ex1 = new Exit(280,370,0,50);
+    ex2 = new Exit(800,800,700,700);
+    c = new Center(130,420);
   }
   
   void setPath(){
@@ -38,8 +40,7 @@ class Allania extends Map{
   }
   
   void setCenter(){
-    Center ce = new Center(130,420);
-    ce.display();
+    c.display();
   }
   
   void setGym(){

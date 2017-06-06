@@ -7,6 +7,7 @@ class Bulbasaur extends Pokemon {
     _lvl = newLvl;
     // _moveset = [INSERT MOVESET HERE];
     _hp = 45;
+    _health = _hp;
     _atk = 49;
     _def = 49;
     _spatk = 65;

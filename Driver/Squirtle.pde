@@ -7,6 +7,7 @@ class Squirtle extends Pokemon {
     _lvl = newLvl;
     // _moveset = [INSERT MOVESET HERE];
     _hp = 44;
+    _health = _hp;
     _atk = 48;
     _def = 65;
     _spatk = 60;

@@ -12,6 +12,7 @@ class Ericatonia extends Map{
     gymlvl = 1;
     ex1 = new Exit(280,360,0,50);
     ex2 = new Exit(280,360,600,650);
+    c = new Center(360,440);
   }
   
   void setPath(){
@@ -37,8 +38,7 @@ class Ericatonia extends Map{
   }
   
   void setCenter(){
-    Center ce = new Center(360,440);
-    ce.display();
+    c.display();
   }
   
   void setGym(){

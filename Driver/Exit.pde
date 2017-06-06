@@ -15,10 +15,8 @@ class Exit {
 
   boolean checkExit(int xcor, int ycor) {
 
-    if ((xcor >= xr1 && xcor <= xr2) && (ycor >= yr1 && ycor <= yr2)) {
-      return true;
-    }
-    return false;
+    return (xcor >= xr1 && xcor <= xr2) && (ycor >= yr1 && ycor <= yr2);
+  
   }
 
   void display() {

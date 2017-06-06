@@ -80,69 +80,6 @@ void draw() {
    user.display();
    */
 
-  /*
-  //Choose a Pokemon to add
-   
-   Pokemon yourPokemon;
-   while (pokemonPicked == false) {
-   println("Now " + userStr + " , what Pokemon do you want?");
-   println("\t1. Bulbasaur. A Grass and Poison type.");
-   println("\t2. Charmander. A Fire type.");
-   println("\t3. Squirtle. A Water type");
-   
-   intType = true;
-   while (!doneTyping) {
-   noLoop();
-   }
-   loop();
-   intType = false;
-   doneTyping = false;
-   if (userInt == 1) {
-   println("What name do you want to give to your Bulbasaur?");
-   stringType = true;
-   userStr = "";
-   while (!doneTyping) {
-   noLoop();
-   }
-   loop();
-   stringType = false;
-   doneTyping = false;
-   yourPokemon = new Bulbasaur(userStr, 5);
-   user.addPokemon(yourPokemon);
-   pokemonPicked = true;
-   } else if (userInt  == 2) {
-   println("What name do you want to give to your Charmander?");
-   stringType = true;
-   userStr = "";
-   while (!doneTyping) {
-   noLoop();
-   }
-   loop();
-   stringType = false;
-   doneTyping = false;
-   yourPokemon = new Charmander(userStr, 5);
-   user.addPokemon(yourPokemon);
-   pokemonPicked = true;
-   } else if (userInt == 3) {
-   println("What name do you want to give to your Squirtle?");
-   stringType = true;
-   userStr = "";
-   while (!doneTyping) {
-   noLoop();
-   }
-   loop();
-   stringType = false;
-   doneTyping = false;
-   yourPokemon = new Squirtle(userStr, 5);
-   user.addPokemon(yourPokemon);
-   pokemonPicked = true;
-   } else {
-   println("Invalid Choice." + userInt);
-   }
-   }
-   println("Cool! Your pokemon's name is " + yourPokemon.getName() + "! Welcome!");
-   noLoop();
-   */
 
   /*
 //Allania Gym
@@ -827,23 +764,28 @@ void keyPressed() {
   } else if (canMove) {
     user.setMove(keyCode, true);
   }
-  if (keyCode == ENTER && stringType == false && (currCity.ex1.checkExit(user.x, user.y) || currCity.ex2.checkExit(user.x, user.y))) {
-    if (currCity.equals(m1)) {
-      currCity = m2;
-      user.x = currCity.ex2.posX;
-      user.y = currCity.ex2.posY;
-    } else if (currCity.equals(m2)) {
-      if (currCity.ex1.checkExit(user.x, user.y)) {
-        currCity = m3;
+  if (keyCode == ENTER && stringType == false) {
+    if ((currCity.ex1.checkExit(user.x, user.y) || currCity.ex2.checkExit(user.x, user.y))) {
+      if (currCity.equals(m1)) {
+        currCity = m2;
+        user.x = currCity.ex2.posX;
+        user.y = currCity.ex2.posY;
+      } else if (currCity.equals(m2)) {
+        if (currCity.ex1.checkExit(user.x, user.y)) {
+          currCity = m3;
+        } else {
+          currCity = m1;
+        }
+        user.x = currCity.ex1.posX;
+        user.y = currCity.ex1.posY;
       } else {
-        currCity = m1;
+        currCity = m2;
+        user.x = currCity.ex1.posX;
+        user.y = currCity.ex1.posY;
       }
-      user.x = currCity.ex1.posX;
-      user.y = currCity.ex1.posY;
-    } else {
-      currCity = m2;
-      user.x = currCity.ex1.posX;
-      user.y = currCity.ex1.posY;
+    } else if (currCity.c.checkCenter(user.x, user.y)) {
+      user.healPokemon();
+      println("Your pokemon are fully healed!");
     }
   }
 }
@@ -888,5 +830,66 @@ void intro() {
   //End intro---------------
 
   user = new Player(userStr, 300, 580, 30);
+  
+  
+  //Choose a Pokemon to add
+
+
+  while (pokemonPicked == false) {
+    println("Now " + userStr + " , what Pokemon do you want?");
+    println("\t1. Bulbasaur. A Grass and Poison type.");
+    println("\t2. Charmander. A Fire type.");
+    println("\t3. Squirtle. A Water type");
+
+    intType = true;
+    while (!doneTyping) {
+      noLoop();
+    }
+    loop();
+    intType = false;
+    doneTyping = false;
+    if (userInt == 1) {
+      println("What name do you want to give to your Bulbasaur?");
+      stringType = true;
+      userStr = "";
+      while (!doneTyping) {
+        noLoop();
+      }
+      loop();
+      stringType = false;
+      doneTyping = false;
+      user.addPokemon(new Bulbasaur(userStr, 5));
+      pokemonPicked = true;
+    } else if (userInt  == 2) {
+      println("What name do you want to give to your Charmander?");
+      stringType = true;
+      userStr = "";
+      while (!doneTyping) {
+        noLoop();
+      }
+      loop();
+      stringType = false;
+      doneTyping = false;
+      user.addPokemon(new Charmander(userStr, 5));
+      pokemonPicked = true;
+    } else if (userInt == 3) {
+      println("What name do you want to give to your Squirtle?");
+      stringType = true;
+      userStr = "";
+      while (!doneTyping) {
+        noLoop();
+      }
+      loop();
+      stringType = false;
+      doneTyping = false;
+      user.addPokemon(new Squirtle(userStr, 5));
+      pokemonPicked = true;
+    } else {
+      println("Invalid Choice." + userInt);
+    }
+  }
+  println("Cool! Your pokemon's name is " + user.getFirst().getName() + "! Welcome!");
+
+
   doneIntro = true;
 }

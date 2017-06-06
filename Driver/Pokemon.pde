@@ -22,7 +22,7 @@ abstract class Pokemon {
   int _speed;
 
   // Battle Stats
-  int _health; // different from _hp bc this is editted in battle, _hp is the stat itself.
+  int _health; // different from _hp bc this is edited in battle, _hp is the stat itself.
 
   // Moves
   Move atk1;

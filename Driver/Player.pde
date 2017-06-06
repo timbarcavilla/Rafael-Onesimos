@@ -24,6 +24,15 @@ class Player extends Trainer {
     return numBadges;
   }
 
+  Pokemon getFirst() {
+    for (int i = 0; i < _party.size(); i++) {
+      if (_party.get(i).getHealth() > 0) {
+        return _party.get(i);
+      }
+    }
+    return null;
+  }
+
   Pokemon getPokedex(int index) {
     for (Pokemon each : _pokedex) {
       if (each.getIndex() == index)
@@ -40,9 +49,9 @@ class Player extends Trainer {
   void addPokemon( Pokemon p ) {
 
     //if party is not full
-    if ( _party.size() < 6 )
+    if ( _party.size() < 6 ) {
       _party.add( p );
-
+    }
     //if party is already full
     else {
       boolean pokeRemoved = false;

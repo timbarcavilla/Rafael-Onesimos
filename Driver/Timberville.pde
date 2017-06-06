@@ -13,6 +13,7 @@ class Timberville extends Map{
     centerY2 = 500;
     gymlvl = 1;
     ex1 = new Exit(280,370,600,650);
+    c = new Center(130,420);
   }
   
   void setPath(){
@@ -38,8 +39,7 @@ class Timberville extends Map{
   }
   
   void setCenter(){
-    Center ce = new Center(130,420);
-    ce.display();
+    c.display();
   }
   
   void setGym(){
