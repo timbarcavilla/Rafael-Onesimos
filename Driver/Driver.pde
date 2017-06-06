@@ -101,8 +101,6 @@ void draw() {
   canMove = true;
   user.move();
   user.display();
-  println(user.x);
-  println(user.y);
   /*
   //Intro-------------------
   println("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!");
@@ -207,7 +205,7 @@ while (badgeWon == false){
     while (puzzleSolved == false){
 
     }
-    */
+    
 
     System.out.println("My name is Allan! I'm the ALLANIA LEADER! ");
 
@@ -530,11 +528,11 @@ while (badgeWon == false){
 
     System.out.println("Entering the Ericatonia gym.");
 
-    /*puzzle
+  
     while (puzzleSolved == false){
 
     }
-    */
+    
 
     System.out.println("My name is Eric! I'm the Ericatonia LEADER! ");
 
@@ -776,7 +774,7 @@ while (badgeWon == false){
 
     if (user.hasPokemon() && !Eric.hasPokemon()){
 
-  System.out.println("Eric: I took you for granted. As proof of your victory, here's the BOULDERBADGE! That is an official POKEMON LEAGUE BADGE! Its bearer's POKEMON become more powerful!");
+  System.out.println("Eric: I took you for granted. As proof of your victory, here's the WHITEBADGE! That is an official POKEMON LEAGUE BADGE! Its bearer's POKEMON become more powerful and oppressive!");
 
   //heal all pokemon
   user.healPokemon();
@@ -837,8 +835,9 @@ System.out.println("Cool! Your new Pokemon's name is " + yourPokemon.getName() +
 }//end gym loop
 
 //End Ericatonia Gym
-}
 */
+}
+
 
 void mousePressed(){
   if (mouseX >= 200 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200){
