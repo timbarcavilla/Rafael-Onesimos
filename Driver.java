@@ -690,7 +690,7 @@ System.out.println("Cool! Your new Pokemon's name is " + yourPokemon.getName() +
 	    }
 
 	    if (Eric.hasPokemon()){
-    System.out.println("All your Pokemon have fainted!")
+    System.out.println("All your Pokemon have fainted!");
 		user.healPokemon();
 		Eric.healPokemon();
 		//start over
