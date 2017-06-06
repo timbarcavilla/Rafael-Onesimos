@@ -119,7 +119,7 @@ class Player extends Trainer {
   void move() {
 
     x = constrain(x+10*(convert(goRight)-convert(goLeft)), d/2, width-(d/2));
-    y = constrain(y+10*(convert(goDown)-convert(goUp)), d/2, width-(d/2));
+    y = constrain(y+10*(convert(goDown)-convert(goUp)), d/2, height-(d/2));
   }
 
   boolean setMove(int board, boolean boo) {

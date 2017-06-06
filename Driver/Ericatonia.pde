@@ -1,8 +1,6 @@
-class Allania extends Map{
+class Ericatonia extends Map{
   
-  Allania(){
-    exitX = 300;
-    exitY = 0;
+  Ericatonia(){
     gymX1 = 400;
     gymX2 = 500;
     gymY1 = 100;
@@ -12,7 +10,7 @@ class Allania extends Map{
     centerY1 = 400;
     centerY2 = 500;
     gymlvl = 1;
-    ex1 = new Exit(280,370,0,50);
+    ex1 = new Exit(200,330,0,50);
   }
   
   void setPath(){
@@ -38,12 +36,12 @@ class Allania extends Map{
   }
   
   void setCenter(){
-    Center ce = new Center(130,420);
+    Center ce = new Center(330,420);
     ce.display();
   }
   
   void setGym(){
-    Gym g = new Gym(gymlvl, "Allania City Gym", "Allan Wang",1, 450,150);
+    Gym g = new Gym(gymlvl, "Allania City Gym", "Allan Wang",1, 150,150);
     g.display();
   }
   
@@ -60,7 +58,3 @@ class Allania extends Map{
     setExits();
   }
 }
-  
-
-  
-      

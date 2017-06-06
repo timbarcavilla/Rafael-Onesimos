@@ -26,10 +26,10 @@ PFont f;
 int rectX,rectY,rectSizeX,rectSizeY;
 color rectC;
 
-Map maps;
+Map currCity;
 
 void setup() {
-  size(1200, 1200);
+  size(1200, 650);
   center = loadImage("center.png");
   dGrass = loadImage("darkgrass.jpg");
   pt = loadImage("path.jpg");
@@ -50,6 +50,9 @@ void setup() {
   rectC = 0;
   
   m1 = new Allania();
+  m2 = new Ericatonia();
+  
+  currCity = m1;
 }
 
 void menu(){
@@ -91,13 +94,15 @@ void draw() {
   while(!buttonClicked){
     menu();
   }
-  m1.display();
+  currCity.display();
   while (!doneIntro){
     intro();
   }
   canMove = true;
   user.move();
   user.display();
+  println(user.x);
+  println(user.y);
   /*
   //Intro-------------------
   println("Hello there! Welcome to the world of POKEMON! My name is OAK. People call me the POKEMON PROF!");
@@ -216,6 +221,11 @@ void keyPressed() {
   }
   else if (canMove){
    user.setMove(keyCode,true);
+  }
+  if (keyCode == ENTER && currCity.ex1.checkExit(user.x,user.y)){
+    if (currCity.equals(m1)){
+      currCity = m2;
+    }
   }
 }
 
