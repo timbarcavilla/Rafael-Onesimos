@@ -41,7 +41,7 @@ public class Player extends Trainer{
 	    String RemPokemon;
 	    System.out.print("What pokemon would you like to release back into the wild?");
       //show party
-	    showParty;
+	    showParty();
 	    String RemPokemon = Keyboard.readString();
 	    while (!pokeRemoved){
 		int i = 0;

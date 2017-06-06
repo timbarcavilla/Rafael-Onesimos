@@ -12,9 +12,8 @@ public class Driver {
     public static void main(String[] args){
 
 	//Intro-------------------
-	System.out.println("Hello there! Welcome to the world of POKEMON! My name is OAK!
-            People call me the POKEMON PROF!");
-	System.out.println("What is your name?")
+	System.out.println("Hello there! Welcome to the world of POKEMON! My name is OAK! People call me the POKEMON PROF!");
+	System.out.println("What is your name?");
 	    String name = Keyboard.readString();
 	System.out.println("Right! Your name is " + name + "!");
 	System.out.println(name + "! Your very own Pokemon legend is about to unfold! A world of dreams and adventures with Pokemon awaits! Let's go!");
@@ -53,7 +52,7 @@ public class Driver {
 		System.out.println("Invalid Choice.");
 		choice = 0;
 	    }
-	}
+
 	user.addPokemon(yourPokemon);
 	}
 
@@ -64,15 +63,13 @@ public class Driver {
 
 	    System.out.println("Entering the Pewter City gym.");
 
-	    //puzzle
+	    /*puzzle
 	    while (puzzleSolved == false){
-		//enter puzzle stuffs
-	    }
 
-	    System.out.println("I'm BROCK! I'm PEWTER's GYM LEADER! I believe in rock hard
-               defense and determination! That's why my POKEMON are all the
-               rock-type! Do you still want to challenge me? Fine then!
-               Show me your best!");
+	    }
+      */
+
+	    System.out.println("My name is BROCK! I'm the PEWTER CITY GYM LEADER! I believe in rock hard defense and determination! That's why my POKEMON are all the rock-type! Do you still want to challenge me? Fine then! Show me your best!");
 
 	    //battle
 	    while (user.hasPokemon() && Brock.hasPokemon()){
@@ -106,7 +103,7 @@ public class Driver {
         }
 
         else {
-          System.out.println("Please input an integer between 1-4 corresponding with the move you want to use.")
+          System.out.println("Please input an integer between 1-4 corresponding with the move you want to use.");
         }
       }
 
@@ -149,10 +146,10 @@ public class Driver {
 
       //if your pokemon is still alive
       if (userPoke.getHp() > 0){
-        System.out.println("Your Pokemon has " + userPoke.getHp() + " HP remaining.")
+        System.out.println("Your Pokemon has " + userPoke.getHp() + " HP remaining.");
         if (userMove == 1){
           if (userPoke.atk1().equals(null)){
-            System.out.println("Pick another move.")
+            System.out.println("Pick another move.");
           }
           else {
             userPoke.atk1( userPoke );
@@ -160,7 +157,7 @@ public class Driver {
         }
         if (userMove == 2){
           if (userPoke.atk2().equals(null)){
-            System.out.println("Pick another move.")
+            System.out.println("Pick another move.");
           }
           else {
             userPoke.atk2( userPoke );
@@ -168,7 +165,7 @@ public class Driver {
         }
         if (userMove == 3){
           if (userPoke.atk3().equals(null)){
-            System.out.println("Pick another move.")
+            System.out.println("Pick another move.");
           }
           else {
             userPoke.atk3( userPoke );
@@ -176,7 +173,7 @@ public class Driver {
         }
         if (userMove == 4){
           if (userPoke.atk4().equals(null)){
-            System.out.println("Pick another move.")
+            System.out.println("Pick another move.");
           }
           else {
             userPoke.atk4( userPoke );
@@ -200,7 +197,7 @@ public class Driver {
       if (userPoke.getSpeed() >= leaderPoke.getSpeed()){
 	  if (userMove == 1){
       if (userPoke.atk1().equals(null)){
-        System.out.println("Pick another move.")
+        System.out.println("Pick another move.");
       }
       else {
         userPoke.atk1( userPoke );
@@ -208,7 +205,7 @@ public class Driver {
         }
         if (userMove == 2){
           if (userPoke.atk2().equals(null)){
-            System.out.println("Pick another move.")
+            System.out.println("Pick another move.");
           }
           else {
             userPoke.atk2( userPoke );
@@ -216,7 +213,7 @@ public class Driver {
         }
         if (userMove == 3){
           if (userPoke.atk3().equals(null)){
-            System.out.println("Pick another move.")
+            System.out.println("Pick another move.");
           }
           else {
             userPoke.atk3( userPoke );
@@ -224,7 +221,7 @@ public class Driver {
         }
         if (userMove == 4){
           if (userPoke.atk4().equals(null)){
-            System.out.println("Pick another move.")
+            System.out.println("Pick another move.");
           }
           else {
             userPoke.atk4( userPoke );
@@ -304,7 +301,7 @@ public class Driver {
       leaderPoke = Brock._party.get(l);
       System.out.println("Brock sent out his " + leaderPoke.getName());
       oppFainted = false;
-      
+
     }
 
 
@@ -312,16 +309,14 @@ public class Driver {
 
 	    if (user.hasPokemon() && !Brock.hasPokemon()){
 
-		System.out.println("Brock: I took you for granted. As proof of your victory, here's the
-               BOULDERBADGE! That is an official POKEMON LEAGUE BADGE!
-               Its bearer's POKEMON become more powerful!");
+		System.out.println("Brock: I took you for granted. As proof of your victory, here's the BOULDERBADGE! That is an official POKEMON LEAGUE BADGE! Its bearer's POKEMON become more powerful!");
 
 		//heal all pokemon
 		user.healPokemon();
 		System.out.println("All your Pokemon have been healed.");
 
 		//add pokemon
-		System.out.println("Choose a Pokemon to add to your party!")
+		System.out.println("Choose a Pokemon to add to your party!");
 		    System.out.println("Which one will you pick?");
 		System.out.println("1. Sandshrew");
 		System.out.println("2. Onix");
@@ -347,8 +342,11 @@ public class Driver {
 
 	    }
 
-	}
+	}//end battle loop
+}//end gym loop
+
 	//End Pewter City Gym
+
 
 	//Start next Gym
 	badgeWon = false;
@@ -359,6 +357,6 @@ public class Driver {
 	}
 
 
-    }
+    }//end main
 
-}
+  }//end class
