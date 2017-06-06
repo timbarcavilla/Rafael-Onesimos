@@ -1,6 +1,6 @@
-class Allania extends Map{
+class Timberville extends Map{
   
-  Allania(){
+  Timberville(){
     exitX = 300;
     exitY = 0;
     gymX1 = 400;
@@ -12,7 +12,7 @@ class Allania extends Map{
     centerY1 = 400;
     centerY2 = 500;
     gymlvl = 1;
-    ex1 = new Exit(280,370,0,50);
+    ex1 = new Exit(280,370,600,650);
   }
   
   void setPath(){
@@ -43,7 +43,7 @@ class Allania extends Map{
   }
   
   void setGym(){
-    Gym g = new Gym(gymlvl, "Allania City Gym", "Allan Wang",1, 350,50);
+    Gym g = new Gym(gymlvl, "Timberville Gym", "Tim Wang",1, 350,50);
     g.display();
   }
   
@@ -60,7 +60,3 @@ class Allania extends Map{
     setExits();
   }
 }
-  
-
-  
-      
