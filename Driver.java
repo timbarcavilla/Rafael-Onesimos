@@ -89,6 +89,7 @@ public class Driver {
         boolean userFainted = false;
         boolean oppFainted = false;
 
+
       boolean validMove = false;
 
       Pokemon userPoke = user._party.get(0);
@@ -182,7 +183,7 @@ public class Driver {
           }
         }
 
-      }
+
       else {
         //player pokemon fainted
 	       userFainted = true;
@@ -193,8 +194,9 @@ public class Driver {
         oppFainted = true;
 
       }
+}
 
-
+  //if user pokemon is faster than brock's
       if (userPoke.getSpeed() >= leaderPoke.getSpeed()){
 	  if (userMove == 1){
       if (userPoke.atk1().equals(null)){
@@ -228,7 +230,7 @@ public class Driver {
             userPoke.atk4( userPoke );
           }
         }
-	    }
+
 
       //if leader pokemon is still alive
       if (leaderPoke.getHp() > 0){
@@ -282,10 +284,33 @@ public class Driver {
 
       }
 
+    }
+
+    //if user fainted but still have healthy Pokemon
+    if (userFainted == true && user.hasPokemon()){
+
+      System.out.println( "Your "+ userPoke.getName() + "fainted.");
+      p++;
+      userPoke = user._party.get(p);
+      System.out.println("Go " + userPoke.getName());
+      userFainted = false;
+
+    }
+
+    if (oppFainted == true && Brock.hasPokemon()){
+
+      System.out.println( "Brock's" + leaderPoke.getName() + "fainted." );
+      l++;
+      leaderPoke = Brock._party.get(l);
+      System.out.println("Brock sent out his " + leaderPoke.getName());
+      oppFainted = false;
+      
+    }
 
 
 
-	    if (user.hasPokemon()){
+
+	    if (user.hasPokemon() && !Brock.hasPokemon()){
 
 		System.out.println("Brock: I took you for granted. As proof of your victory, here's the
                BOULDERBADGE! That is an official POKEMON LEAGUE BADGE!
