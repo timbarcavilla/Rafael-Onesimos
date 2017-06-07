@@ -85,7 +85,7 @@ class Gym {
             println("Please input an integer between 1-4 corresponding with the move you want to use.");
           }
         }
-
+//////////////////ERROR SOMEWHERE AFTER THIS/////////////
         if (leaderPoke.getSpeed() > plPoke.getSpeed()) {
           oppMove = (int)(Math.random() * 4 + 1);
           if (oppMove == 1) {
