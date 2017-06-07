@@ -5,7 +5,6 @@ class Charmander extends Pokemon {
         _name = newName;
         _index = 4;
         _lvl = newLvl;
-        // _moveset = [INSERT MOVESET HERE];
         _hp = 39;
         _atk = 52;
         _def = 43;
@@ -14,11 +13,11 @@ class Charmander extends Pokemon {
         _speed = 65;
         _type1 = 2;
         _type2 = 0;
-        atk1 = new Move(  );
-        atk2 = new Move(  );
-        atk3 = new Move(  );
-        atk4 = null;
-        hasEvo = TRUE;
+        atk1 = new Move( "Scratch",35,40,100,0,0,0 );
+        atk2 = new Move( "Growl",40,0,100,2,3,5 );
+        atk3 = new Move( "Ember",25,40,100,1,0,0 );
+        atk4 = new Move( "null",-1,-1,-1,-1,-1,-1 );
+        hasEvo = true;
         evoLvl = 16;
         evoTo = 5;
     }

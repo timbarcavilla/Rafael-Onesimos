@@ -5,7 +5,6 @@ class Growlithe extends Pokemon {
         _name = newName;
         _index = 58;
         _lvl = newLvl;
-        // _moveset = [INSERT MOVESET HERE];
         _hp = 55;
         _atk = 70;
         _def = 45;
@@ -14,11 +13,11 @@ class Growlithe extends Pokemon {
         _speed = 60;
         _type1 = 2;
         _type2 = 0;
-        atk1 = new Move(  );
-        atk2 = new Move(  );
-        atk3 = new Move(  );
-        atk4 = null;
-        hasEvo = TRUE;
+        atk1 = new Move( "Bite",25,60,100,0,0,0 );
+        atk2 = new Move( "Roar",20,0,100,2,3,5 );
+        atk3 = new Move( "Ember",25,40,100,1,0,0 );
+        atk4 = new Move( "Take Down",20,90,85,0,0,0 );
+        hasEvo = true;
         evoLvl = 30;
         evoTo = 59;
     }

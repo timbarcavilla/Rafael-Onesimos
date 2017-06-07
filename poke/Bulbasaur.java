@@ -5,7 +5,6 @@ class Bulbasaur extends Pokemon {
         _name = newName;
         _index = 1;
         _lvl = newLvl;
-        // _moveset = [INSERT MOVESET HERE];
         _hp = 45;
         _atk = 49;
         _def = 49;
@@ -14,11 +13,11 @@ class Bulbasaur extends Pokemon {
         _speed = 45;
         _type1 = 3;
         _type2 = 9;
-        atk1 = new Move(  );
-        atk2 = new Move(  );
-        atk3 = new Move(  );
-        atk4 = null;
-        hasEvo = TRUE;
+        atk1 = new Move( "Tackle",35,50,100,0,0,0 );
+        atk2 = new Move( "Growl",40,0,100,2,3,5 );
+        atk3 = new Move( "Vine Whip",25,45,100,0,0,0 );
+        atk4 = new Move( "null",-1,-1,-1,-1,-1,-1 );
+        hasEvo = true;
         evoLvl = 16;
         evoTo = 2;
     }

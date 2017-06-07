@@ -5,7 +5,6 @@ class Venusaur extends Pokemon {
         _name = newName;
         _index = 3;
         _lvl = newLvl;
-        // _moveset = [INSERT MOVESET HERE];
         _hp = 80;
         _atk = 82;
         _def = 83;
@@ -14,11 +13,11 @@ class Venusaur extends Pokemon {
         _speed = 80;
         _type1 = 3;
         _type2 = 9;
-        atk1 = new Move(  );
-        atk2 = new Move(  );
-        atk3 = new Move(  );
-        atk4 = null;
-        hasEvo = FALSE;
+        atk1 = new Move( "Razor Leaf",25,55,95,1,0,0 );
+        atk2 = new Move( "Tackle",35,50,100,0,0,0 );
+        atk3 = new Move( "Vine Whip",25,45,100,0,0,0 );
+        atk4 = new Move( "Frenzy Plant",5,150,90,1,0,0 );
+        hasEvo = false;
         evoLvl = -1;
         evoTo = 0;
     }

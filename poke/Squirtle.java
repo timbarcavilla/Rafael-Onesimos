@@ -5,7 +5,6 @@ class Squirtle extends Pokemon {
         _name = newName;
         _index = 7;
         _lvl = newLvl;
-        // _moveset = [INSERT MOVESET HERE];
         _hp = 44;
         _atk = 48;
         _def = 65;
@@ -14,11 +13,11 @@ class Squirtle extends Pokemon {
         _speed = 43;
         _type1 = 4;
         _type2 = 0;
-        atk1 = new Move(  );
-        atk2 = new Move(  );
-        atk3 = new Move(  );
-        atk4 = null;
-        hasEvo = TRUE;
+        atk1 = new Move( "Tackle",35,50,100,0,0,0 );
+        atk2 = new Move( "Bite",25,60,100,0,0,0 );
+        atk3 = new Move( "Bubble",30,40,100,1,0,0 );
+        atk4 = new Move( "null",-1,-1,-1,-1,-1,-1 );
+        hasEvo = true;
         evoLvl = 16;
         evoTo = 8;
     }
