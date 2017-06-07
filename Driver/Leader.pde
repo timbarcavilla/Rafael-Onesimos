@@ -1,11 +1,8 @@
 class Leader extends Trainer {
 
-  int egoSize;
-
-  Leader(String newName, int newEgo) {
+  Leader(String newName) {
 
     _name = newName;
-    egoSize = newEgo;
     _party = new ArrayList<Pokemon>();
   }
 
@@ -27,6 +24,15 @@ class Leader extends Trainer {
     for (Pokemon p : _party){
       p.heal();
     }
+  }
+  
+  Pokemon getFirst(){
+    for (int i = 0; i < _party.size(); i++) {
+      if (_party.get(i).getHealth() > 0) {
+        return _party.get(i);
+      }
+    }
+    return null;
   }
   
 }

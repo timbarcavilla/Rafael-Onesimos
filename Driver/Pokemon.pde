@@ -9,10 +9,7 @@ abstract class Pokemon {
   int _type2; // secondary type
   int _lvl; // level, based on exp
   int _exp; // experience points
-  boolean hasEvo; // boolean for if the pokemon has a next evolution
-  int evoLvl; // level in which this pokemon evolves, if hasEvo is true
-  int evoTo; // index of next pokemon in evolution tree
-
+ 
   // Base Stats
   int _hp;
   int _atk;
@@ -49,12 +46,6 @@ abstract class Pokemon {
   }
   int getExp() { 
     return _exp;
-  }
-  boolean hasEvo() { 
-    return hasEvo;
-  }
-  int getEvoLvl() { 
-    return evoLvl;
   }
 
   int getHp() { 
@@ -119,12 +110,6 @@ abstract class Pokemon {
     return s;
   }
 
-  void openEvo() { 
-    hasEvo = true;
-  }
-  void closeEvo() { 
-    hasEvo = false;
-  }
 
   Move setMove( int place, Move m ) {
 
@@ -167,24 +152,6 @@ abstract class Pokemon {
 
   void hit( int dmg ) {
     _health -= dmg;
-  }
-
-  void levelUp() {
-    _hp += 3;
-    _atk += 2;
-    _def += 2;
-    _spatk += 2;
-    _spdef += 2;
-    _speed += 1;
-    _lvl += 1;
-    evolve(); // only evolves when _lvl == evoLvl
-  }
-
-  void evolve() {
-
-    if ( hasEvo == true && _lvl == evoLvl) {
-      _index += evoTo;
-    }
   }
 
   void heal() {

@@ -31,13 +31,6 @@ class Ericatonia extends Map{
     background(#98FF00);
   }
   
-  void setDarkGrass(){
-    DarkGrass d = new DarkGrass(580,380);
-    DarkGrass d2 = new DarkGrass(580,350);
-    d.display();
-    d2.display();
-  }
-  
   void setCenter(){
     c.display();
   }
@@ -54,7 +47,6 @@ class Ericatonia extends Map{
   void display(){
     setBackground();
     setPath();
-    setDarkGrass();
     setCenter();
     setGym();
     setExits();

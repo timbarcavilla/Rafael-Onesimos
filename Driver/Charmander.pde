@@ -19,9 +19,7 @@ class Charmander extends Pokemon {
     atk2 = new Move( "Fire Fang",15,65,95,0,5,0);
     atk3 = new Move( "Ember",25,40,100,1,5,0 );
     atk4 = new Move( "Flame Burst",20,70,100,1,5,0);
-    hasEvo = true;
-    evoLvl = 16;
-    evoTo = 5;
+    
   }
 
 }

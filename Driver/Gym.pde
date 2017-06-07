@@ -6,7 +6,6 @@ class Gym {
   String _name;
   Leader _leader;
   boolean passed;
-  boolean badgeWon;
 
   Gym(int newLevel, String newName, String leaderName, int ego, int xcor, int ycor) {
 

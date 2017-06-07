@@ -10,7 +10,6 @@ abstract class Map{
   
   abstract void setPath();
   abstract void setBackground();
-  abstract void setDarkGrass();
   abstract void setCenter();
   abstract void setGym();
   abstract void display();

@@ -1,5 +1,4 @@
 PImage center;
-PImage dGrass;
 PImage pt;
 PImage gy;
 
@@ -21,7 +20,6 @@ void setup() {
   size(700, 650);
 
   center = loadImage("center.png");
-  dGrass = loadImage("darkgrass.jpg");
   pt = loadImage("path.jpg");
   gy = loadImage("gym.png");
   pokemonPicked = false;
