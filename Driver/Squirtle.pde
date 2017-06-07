@@ -20,5 +20,9 @@ class Squirtle extends Pokemon {
     atk3 = new Move( "Bubble",30,40,100,1,5,0 );
     atk4 = new Move( "Aqua Tail",10,90,90,0,5,0);
   }
+  
+  String toString() {
+    return "Squirtle\n" + super.toString();
+  }
 
 }

@@ -15,11 +15,12 @@ class Charmander extends Pokemon {
     _speed = 65;
     _type1 = 2;
     _type2 = 0;
-    atk1 = new Move( "Scratch",35,40,100,0,2,0 );
-    atk2 = new Move( "Fire Fang",15,65,95,0,5,0);
-    atk3 = new Move( "Ember",25,40,100,1,5,0 );
-    atk4 = new Move( "Flame Burst",20,70,100,1,5,0);
-    
+    atk1 = new Move( "Scratch", 35, 40, 100, 0, 2, 0 );
+    atk2 = new Move( "Fire Fang", 15, 65, 95, 0, 5, 0);
+    atk3 = new Move( "Ember", 25, 40, 100, 1, 5, 0 );
+    atk4 = new Move( "Flame Burst", 20, 70, 100, 1, 5, 0);
   }
-
+  String toString() {
+    return "Charmander\n" + super.toString();
+  }
 }

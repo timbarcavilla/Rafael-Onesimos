@@ -788,11 +788,28 @@ void keyPressed() {
       currCity.g.battle(user);
     }
   }
+  if (keyCode == 'R' && !stringType){
+    background(0);
+    int i = 0;
+    for (Pokemon each : user._party){
+      fill(255);
+      textSize(12);
+      text(each.toString(),300,20+i);
+      i+=100;
+    }
+    noLoop();
+  }
 }
 
 void keyReleased() {
   if (canMove) {
     user.setMove(keyCode, false);
+  }
+  if (keyCode == 'R'){
+    loop();
+    currCity.display();
+    user.move();
+    user.display();
   }
 }
 

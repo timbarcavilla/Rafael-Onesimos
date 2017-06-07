@@ -170,4 +170,15 @@ abstract class Pokemon {
     else
       return 0;
   }
+  
+  String toString(){
+    String retstr = "";
+    retstr += "--------------------";
+    retstr += "\n#" + _index;
+    retstr += "\nName: " + _name;
+    retstr += "\nMax HP:" + _hp;
+    retstr += "\nCurr Health:" + _health;
+    retstr += "\n";
+    return retstr;
+  }
 }
