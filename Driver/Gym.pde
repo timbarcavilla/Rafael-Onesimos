@@ -34,12 +34,23 @@ class Gym {
       pokemonPicked = false;
 
       Pokemon _leaderPoke;
+      if (name.equals("Allania")) {
       _leaderPoke = new Bulbasaur("bulb", 5);
       _leader.addPokemon(_leaderPoke);
+      }
+      if (name.equals("Ericatonia")) {
+        leaderPoke = new Snorlax("Snorlax", 10);
+        _leader.addPokemon(_leaderPoke);
+      }
+      if (name.equals("Timberville")) {
+        _leaderPoke = new Gyrados("Gyrados", 20);
+        _leader.addPokemon(_leaderPoke);
+      }
+      
       println(userInt);
       println("Entering the " + _name + " gym.");
 
-      println("My name is" + _leader.getName() + "! I'm the " + _name + " LEADER! ");
+      println("My name is " + _leader.getName() + "! I'm the " + _name + " LEADER! ");
 
       //battle
       while (pl.hasPokemon() && _leader.hasPokemon()) {
@@ -89,65 +100,49 @@ class Gym {
         if (leaderPoke.getSpeed() > plPoke.getSpeed()) {
           oppMove = (int)(Math.random() * 4 + 1);
           if (oppMove == 1) {
-            if (leaderPoke.atk1.equals(null)) {
-              oppMove = (int)(Math.random() * 4 + 1);
-            } else {
+            
               leaderPoke.attack1( plPoke );
-            }
+            
           }
           if (oppMove == 2) {
-            if (leaderPoke.atk2.equals(null)) {
-              oppMove = (int)(Math.random() * 4 + 1);
-            } else {
+            
               leaderPoke.attack2( plPoke );
-            }
+            
           }
           if (oppMove == 3) {
-            if (leaderPoke.atk3.equals(null)) {
-              oppMove = (int)(Math.random() * 4 + 1);
-            } else {
+            
               leaderPoke.attack3( plPoke );
-            }
+            
           }
           if (oppMove == 4) {
-            if (leaderPoke.atk4.equals(null)) {
-              oppMove = (int)(Math.random() * 4 + 1);
-            } else {
+           
               leaderPoke.attack4( plPoke );
-            }
+            
           }
-        }
+        
 
         //if your pokemon is still alive
         if (plPoke.getHp() > 0) {
           println("Your Pokemon has " + plPoke.getHp() + " HP remaining.");
           if (plMove == 1) {
-            if (plPoke.atk1.equals(null)) {
-              println("Pick another move.");
-            } else {
+            
               plPoke.attack1( plPoke );
-            }
+            
           }
           if (plMove == 2) {
-            if (plPoke.atk2.equals(null)) {
-              println("Pick another move.");
-            } else {
+            
               plPoke.attack2( plPoke );
-            }
+            
           }
           if (plMove == 3) {
-            if (plPoke.atk3.equals(null)) {
-              println("Pick another move.");
-            } else {
+            
               plPoke.attack3( plPoke );
-            }
+            
           }
           if (plMove == 4) {
-            if (plPoke.atk4.equals(null)) {
-              println("Pick another move.");
-            } else {
+            
               plPoke.attack4( plPoke );
-            }
+            
           } else {
             //player pokemon fainted
             plFainted = true;
@@ -157,37 +152,31 @@ class Gym {
             oppFainted = true;
           }
         }
+        }
 
         //if pl pokemon is faster than _leader's
         if (plPoke.getSpeed() >= leaderPoke.getSpeed()) {
           if (plMove == 1) {
-            if (plPoke.atk1.equals(null)) {
-              println("Pick another move.");
-            } else {
+            
               plPoke.attack1( plPoke );
-            }
+            
           }
           if (plMove == 2) {
-            if (plPoke.atk2.equals(null)) {
-              println("Pick another move.");
-            } else {
+            
               plPoke.attack2( plPoke );
-            }
+            
           }
           if (plMove == 3) {
-            if (plPoke.atk3.equals(null)) {
-              println("Pick another move.");
-            } else {
+            
               plPoke.attack3( plPoke );
-            }
+            
           }
           if (plMove == 4) {
-            if (plPoke.atk4.equals(null)) {
-              println("Pick another move.");
-            } else {
+            
               plPoke.attack4( plPoke );
-            }
+            
           }
+        
 
 
           //if leader pokemon is still alive
@@ -195,34 +184,27 @@ class Gym {
             println("_leader's Pokemon has " + leaderPoke.getHp() + " remaining.");
             oppMove = (int)(Math.random() * 4 + 1);
             if (oppMove == 1) {
-              if (leaderPoke.atk1.equals(null)) {
-                oppMove = (int)(Math.random() * 4 + 1);
-              } else {
+              
                 leaderPoke.attack1( plPoke );
-              }
+              
             }
             if (oppMove == 2) {
-              if (leaderPoke.atk2.equals(null)) {
-                oppMove = (int)(Math.random() * 4 + 1);
-              } else {
+             
                 leaderPoke.attack2( plPoke );
-              }
+              
             }
             if (oppMove == 3) {
-              if (leaderPoke.atk3.equals(null)) {
-                oppMove = (int)(Math.random() * 4 + 1);
-              } else {
+              
                 leaderPoke.attack3( plPoke );
-              }
+              
             }
             if (oppMove == 4) {
-              if (leaderPoke.atk4.equals(null)) {
-                oppMove = (int)(Math.random() * 4 + 1);
-              } else {
+              
                 leaderPoke.attack4( plPoke );
-              }
+              
             }
-          } else {
+          } 
+          else {
             //_leader's pokemon fainted
 
             oppFainted = true;
@@ -234,6 +216,8 @@ class Gym {
             plFainted = false;
           }
         }
+      
+      
 
         //if pl fainted but still have healthy Pokemon
         if (plFainted == true && pl.hasPokemon()) {
@@ -272,7 +256,7 @@ class Gym {
             println("\t" + (i+1) + ". " + choicePoke.get(i).getName());
           }
 
-          while (pokemonPicked = false) {
+          while (pokemonPicked == false) {
             intType = true;
             while (!doneTyping) {
               noLoop();
