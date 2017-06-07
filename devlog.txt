@@ -63,3 +63,11 @@ Allan continued working on Battle functions
 
 06/04/17
 Tim started working on main menu, buttons, images, created Map, DarkGrass, Center, Path, and made various edits
+
+06/05/17
+Tim finished move function, started working on exits
+Allan worked on Gym battle functions
+Eric worked on moves 
+
+06/06/17
+Tim finished exit, center function.
