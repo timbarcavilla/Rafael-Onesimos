@@ -786,6 +786,8 @@ void keyPressed() {
     } else if (currCity.c.checkCenter(user.x, user.y)) {
       user.healPokemon();
       println("Your pokemon are fully healed!");
+    } else if (currCity.g.checkGym(user.x, user.y)) {
+      currCity.g.battle(user);
     }
   }
 }
@@ -830,8 +832,8 @@ void intro() {
   //End intro---------------
 
   user = new Player(userStr, 300, 580, 30);
-  
-  
+
+
   //Choose a Pokemon to add
 
 
@@ -892,4 +894,15 @@ void intro() {
 
 
   doneIntro = true;
+}
+
+Pokemon genPoke() {
+  int r = (int)(Math.random() * 3);
+  if (r == 0) {
+    return new Bulbasaur("Bulbasaur", 5);
+  } else if (r == 1) {
+    return new Charmander("Charmander", 5);
+  } else {
+    return new Squirtle("Squirtle", 5);
+  }
 }

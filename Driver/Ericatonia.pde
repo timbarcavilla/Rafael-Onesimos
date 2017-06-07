@@ -13,6 +13,7 @@ class Ericatonia extends Map{
     ex1 = new Exit(280,360,0,50);
     ex2 = new Exit(280,360,600,650);
     c = new Center(360,440);
+    g = new Gym(gymlvl, "Ericatonia City Gym", "Eric Chen",1, 50,50);
   }
   
   void setPath(){
@@ -42,7 +43,6 @@ class Ericatonia extends Map{
   }
   
   void setGym(){
-    Gym g = new Gym(gymlvl, "Allania City Gym", "Allan Wang",1, 50,50);
     g.display();
   }
   

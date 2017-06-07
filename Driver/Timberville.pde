@@ -15,6 +15,7 @@ class Timberville extends Map{
     ex1 = new Exit(280,370,600,650);
     ex2 = new Exit(800,800,800,800);
     c = new Center(130,420);
+    g = new Gym(gymlvl, "Timberville Gym", "Tim Wang",1, 350,50);
   }
   
   void setPath(){
@@ -44,7 +45,6 @@ class Timberville extends Map{
   }
   
   void setGym(){
-    Gym g = new Gym(gymlvl, "Timberville Gym", "Tim Wang",1, 350,50);
     g.display();
   }
   

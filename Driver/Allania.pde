@@ -15,6 +15,7 @@ class Allania extends Map{
     ex1 = new Exit(280,370,0,50);
     ex2 = new Exit(800,800,700,700);
     c = new Center(130,420);
+    g = new Gym(gymlvl, "Allania City Gym", "Allan Wang",1, 350,50);
   }
   
   void setPath(){
@@ -44,7 +45,6 @@ class Allania extends Map{
   }
   
   void setGym(){
-    Gym g = new Gym(gymlvl, "Allania City Gym", "Allan Wang",1, 350,50);
     g.display();
   }
   
