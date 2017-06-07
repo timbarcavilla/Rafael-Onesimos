@@ -36,16 +36,10 @@ class Gym {
       Pokemon _leaderPoke;
       _leaderPoke = new Bulbasaur("bulb", 5);
       _leader.addPokemon(_leaderPoke);
+      println(userInt);
+      println("Entering the " + _name + " gym.");
 
-      System.out.println("Entering the " + _name + " gym.");
-
-      /*puzzle
-       while (puzzleSolved == false){
-       
-       }
-       */
-
-      System.out.println("My name is" + _leader.getName() + "! I'm the " + _name + " LEADER! ");
+      println("My name is" + _leader.getName() + "! I'm the " + _name + " LEADER! ");
 
       //battle
       while (pl.hasPokemon() && _leader.hasPokemon()) {
@@ -70,6 +64,10 @@ class Gym {
 
         //ask pl to put in integer until they input valid input
         while (!validMove) {
+          println("\t1). "+plPoke.atk1._name);
+          println("\t2). "+plPoke.atk2._name);
+          println("\t3). "+plPoke.atk3._name);
+          println("\t4). "+plPoke.atk4._name);
           intType = true;
           while (!doneTyping) {
             noLoop();
@@ -84,7 +82,7 @@ class Gym {
               validMove = true;
             }
           } else {
-            System.out.println("Please input an integer between 1-4 corresponding with the move you want to use.");
+            println("Please input an integer between 1-4 corresponding with the move you want to use.");
           }
         }
 
@@ -122,31 +120,31 @@ class Gym {
 
         //if your pokemon is still alive
         if (plPoke.getHp() > 0) {
-          System.out.println("Your Pokemon has " + plPoke.getHp() + " HP remaining.");
+          println("Your Pokemon has " + plPoke.getHp() + " HP remaining.");
           if (plMove == 1) {
             if (plPoke.atk1.equals(null)) {
-              System.out.println("Pick another move.");
+              println("Pick another move.");
             } else {
               plPoke.attack1( plPoke );
             }
           }
           if (plMove == 2) {
             if (plPoke.atk2.equals(null)) {
-              System.out.println("Pick another move.");
+              println("Pick another move.");
             } else {
               plPoke.attack2( plPoke );
             }
           }
           if (plMove == 3) {
             if (plPoke.atk3.equals(null)) {
-              System.out.println("Pick another move.");
+              println("Pick another move.");
             } else {
               plPoke.attack3( plPoke );
             }
           }
           if (plMove == 4) {
             if (plPoke.atk4.equals(null)) {
-              System.out.println("Pick another move.");
+              println("Pick another move.");
             } else {
               plPoke.attack4( plPoke );
             }
@@ -164,28 +162,28 @@ class Gym {
         if (plPoke.getSpeed() >= leaderPoke.getSpeed()) {
           if (plMove == 1) {
             if (plPoke.atk1.equals(null)) {
-              System.out.println("Pick another move.");
+              println("Pick another move.");
             } else {
               plPoke.attack1( plPoke );
             }
           }
           if (plMove == 2) {
             if (plPoke.atk2.equals(null)) {
-              System.out.println("Pick another move.");
+              println("Pick another move.");
             } else {
               plPoke.attack2( plPoke );
             }
           }
           if (plMove == 3) {
             if (plPoke.atk3.equals(null)) {
-              System.out.println("Pick another move.");
+              println("Pick another move.");
             } else {
               plPoke.attack3( plPoke );
             }
           }
           if (plMove == 4) {
             if (plPoke.atk4.equals(null)) {
-              System.out.println("Pick another move.");
+              println("Pick another move.");
             } else {
               plPoke.attack4( plPoke );
             }
@@ -194,7 +192,7 @@ class Gym {
 
           //if leader pokemon is still alive
           if (leaderPoke.getHp() > 0) {
-            System.out.println("_leader's Pokemon has " + leaderPoke.getHp() + " remaining.");
+            println("_leader's Pokemon has " + leaderPoke.getHp() + " remaining.");
             oppMove = (int)(Math.random() * 4 + 1);
             if (oppMove == 1) {
               if (leaderPoke.atk1.equals(null)) {
@@ -240,19 +238,19 @@ class Gym {
         //if pl fainted but still have healthy Pokemon
         if (plFainted == true && pl.hasPokemon()) {
 
-          System.out.println( "Your "+ plPoke.getName() + "fainted.");
+          println( "Your "+ plPoke.getName() + "fainted.");
           p++;
           plPoke = pl._party.get(p);
-          System.out.println("Go " + plPoke.getName());
+          println("Go " + plPoke.getName());
           plFainted = false;
         }
 
         if (oppFainted == true && _leader.hasPokemon()) {
 
-          System.out.println( "_leader's" + leaderPoke.getName() + "fainted." );
+          println( "_leader's" + leaderPoke.getName() + "fainted." );
           l++;
           leaderPoke = _leader._party.get(l);
-          System.out.println("_leader sent out his " + leaderPoke.getName());
+          println("_leader sent out his " + leaderPoke.getName());
           oppFainted = false;
         }
 
@@ -261,11 +259,11 @@ class Gym {
 
         if (pl.hasPokemon() && !_leader.hasPokemon()) {
 
-          System.out.println("_leader: I took you for granted. As proof of your victory, here's the BOULDERBADGE! That is an official POKEMON LEAGUE BADGE! Its bearer's POKEMON become more powerful!");
+          println("_leader: I took you for granted. As proof of your victory, here's the BOULDERBADGE! That is an official POKEMON LEAGUE BADGE! Its bearer's POKEMON become more powerful!");
 
           //add pokemon
-          System.out.println("Choose a Pokemon to add to your party!");
-          System.out.println("Which one will you pick?");
+          println("Choose a Pokemon to add to your party!");
+          println("Which one will you pick?");
           ArrayList<Pokemon> choicePoke = new ArrayList<Pokemon>();
           for (int i = 0; i < 3; i++) {
             choicePoke.add(genPoke());
@@ -294,7 +292,7 @@ class Gym {
 
             yourPokemon.setName(userStr);
             pl.addPokemon(yourPokemon);
-            System.out.println("Cool! Your new Pokemon's name is " + yourPokemon.getName() + "!");
+            println("Cool! Your new Pokemon's name is " + yourPokemon.getName() + "!");
           }
           //add badge
           pl.addBadge();
@@ -305,7 +303,7 @@ class Gym {
         }
 
         if (_leader.hasPokemon()) {
-          System.out.println("_leader: ur a loser");
+          println("_leader: ur a loser");
           _leader.healPokemon();
           //start over
           continue;
@@ -331,6 +329,6 @@ class Gym {
   }
   
   boolean checkGym(int xcor, int ycor){
-    return (xcor >= x-100 && xcor <= x+100) && (ycor >= y-100 && ycor <= y+100);
+    return (xcor >= x-150 && xcor <= x+150) && (ycor >= y-150 && ycor <= y+150);
   }
 }
