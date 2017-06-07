@@ -23,7 +23,7 @@ class Charmeleon extends Pokemon {
   }
 
   String toString() {
-    return Charmeleon\n + super.toString();
+    return "Charmeleon\n" + super.toString();
   }
 
 }

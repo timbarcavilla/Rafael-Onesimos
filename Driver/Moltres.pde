@@ -23,7 +23,7 @@ class Moltres extends Pokemon {
   }
 
   String toString() {
-    return Moltres\n + super.toString();
+    return "Moltres\n" + super.toString();
   }
 
 }

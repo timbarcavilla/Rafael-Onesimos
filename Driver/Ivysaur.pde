@@ -23,7 +23,7 @@ class Ivysaur extends Pokemon {
   }
 
   String toString() {
-    return Ivysaur\n + super.toString();
+    return "Ivysaur\n" + super.toString();
   }
 
 }

@@ -23,7 +23,7 @@ class Electabuzz extends Pokemon {
   }
 
   String toString() {
-    return Electabuzz\n + super.toString();
+    return "Electabuzz\n" + super.toString();
   }
 
 }

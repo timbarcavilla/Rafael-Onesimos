@@ -23,7 +23,7 @@ class Pikachu extends Pokemon {
   }
 
   String toString() {
-    return Pikachu\n + super.toString();
+    return "Pikachu\n" + super.toString();
   }
 
 }

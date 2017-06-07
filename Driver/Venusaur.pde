@@ -23,7 +23,7 @@ class Venusaur extends Pokemon {
   }
 
   String toString() {
-    return Venusaur\n + super.toString();
+    return "Venusaur\n" + super.toString();
   }
 
 }

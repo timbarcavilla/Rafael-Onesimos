@@ -23,7 +23,7 @@ class Vaporeon extends Pokemon {
   }
 
   String toString() {
-    return Vaporeon\n + super.toString();
+    return "Vaporeon\n" + super.toString();
   }
 
 }

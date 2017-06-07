@@ -23,7 +23,7 @@ class Squirtle extends Pokemon {
   }
 
   String toString() {
-    return Squirtle\n + super.toString();
+    return "Squirtle\n" + super.toString();
   }
 
 }

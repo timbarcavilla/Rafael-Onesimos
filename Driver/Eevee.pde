@@ -23,7 +23,7 @@ class Eevee extends Pokemon {
   }
 
   String toString() {
-    return Eevee\n + super.toString();
+    return "Eevee\n" + super.toString();
   }
 
 }

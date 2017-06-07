@@ -23,7 +23,7 @@ class Snorlax extends Pokemon {
   }
 
   String toString() {
-    return Snorlax\n + super.toString();
+    return "Snorlax\n" + super.toString();
   }
 
 }

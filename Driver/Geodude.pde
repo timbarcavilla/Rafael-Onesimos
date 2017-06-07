@@ -23,7 +23,7 @@ class Geodude extends Pokemon {
   }
 
   String toString() {
-    return Geodude\n + super.toString();
+    return "Geodude\n" + super.toString();
   }
 
 }

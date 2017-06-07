@@ -46,7 +46,7 @@ public class PDEPrinter {
 				    + pokemon[10].toLowerCase() + ";\n    evoLvl = "
 				    + pokemon[11] + ";\n    evoTo = "
 				    + pokemon[12] + ";\n  }\n\n"
-				    + "  String toString() {\n    return " + pokemon[1] + "\\n + super.toString();\n  }"
+				    + "  String toString() {\n    return \"" + pokemon[1] + "\\n\" + super.toString();\n  }"
 				    + "\n\n}" );
 		    writer.close();
 		}

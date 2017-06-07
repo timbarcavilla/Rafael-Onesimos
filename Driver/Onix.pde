@@ -23,7 +23,7 @@ class Onix extends Pokemon {
   }
 
   String toString() {
-    return Onix\n + super.toString();
+    return "Onix\n" + super.toString();
   }
 
 }

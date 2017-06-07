@@ -23,7 +23,7 @@ class Wartortle extends Pokemon {
   }
 
   String toString() {
-    return Wartortle\n + super.toString();
+    return "Wartortle\n" + super.toString();
   }
 
 }

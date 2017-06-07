@@ -23,7 +23,7 @@ class Jolteon extends Pokemon {
   }
 
   String toString() {
-    return Jolteon\n + super.toString();
+    return "Jolteon\n" + super.toString();
   }
 
 }

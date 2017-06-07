@@ -23,7 +23,7 @@ class Raichu extends Pokemon {
   }
 
   String toString() {
-    return Raichu\n + super.toString();
+    return "Raichu\n" + super.toString();
   }
 
 }

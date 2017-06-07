@@ -23,7 +23,7 @@ class Mew extends Pokemon {
   }
 
   String toString() {
-    return Mew\n + super.toString();
+    return "Mew\n" + super.toString();
   }
 
 }

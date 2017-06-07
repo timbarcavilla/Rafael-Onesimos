@@ -23,7 +23,7 @@ class Charmander extends Pokemon {
   }
 
   String toString() {
-    return Charmander\n + super.toString();
+    return "Charmander\n" + super.toString();
   }
 
 }

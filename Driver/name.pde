@@ -23,7 +23,7 @@ class name extends Pokemon {
   }
 
   String toString() {
-    return name\n + super.toString();
+    return "name\n" + super.toString();
   }
 
 }

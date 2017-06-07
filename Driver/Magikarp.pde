@@ -23,7 +23,7 @@ class Magikarp extends Pokemon {
   }
 
   String toString() {
-    return Magikarp\n + super.toString();
+    return "Magikarp\n" + super.toString();
   }
 
 }

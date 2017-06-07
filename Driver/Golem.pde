@@ -23,7 +23,7 @@ class Golem extends Pokemon {
   }
 
   String toString() {
-    return Golem\n + super.toString();
+    return "Golem\n" + super.toString();
   }
 
 }

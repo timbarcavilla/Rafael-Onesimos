@@ -23,7 +23,7 @@ class Magmar extends Pokemon {
   }
 
   String toString() {
-    return Magmar\n + super.toString();
+    return "Magmar\n" + super.toString();
   }
 
 }

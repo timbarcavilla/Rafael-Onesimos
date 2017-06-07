@@ -23,7 +23,7 @@ class Blastoise extends Pokemon {
   }
 
   String toString() {
-    return Blastoise\n + super.toString();
+    return "Blastoise\n" + super.toString();
   }
 
 }

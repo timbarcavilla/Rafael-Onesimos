@@ -23,7 +23,7 @@ class Bulbasaur extends Pokemon {
   }
 
   String toString() {
-    return Bulbasaur\n + super.toString();
+    return "Bulbasaur\n" + super.toString();
   }
 
 }

@@ -23,7 +23,7 @@ class Articuno extends Pokemon {
   }
 
   String toString() {
-    return Articuno\n + super.toString();
+    return "Articuno\n" + super.toString();
   }
 
 }

@@ -23,7 +23,7 @@ class Gyarados extends Pokemon {
   }
 
   String toString() {
-    return Gyarados\n + super.toString();
+    return "Gyarados\n" + super.toString();
   }
 
 }

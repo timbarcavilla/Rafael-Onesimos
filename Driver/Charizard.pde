@@ -23,7 +23,7 @@ class Charizard extends Pokemon {
   }
 
   String toString() {
-    return Charizard\n + super.toString();
+    return "Charizard\n" + super.toString();
   }
 
 }

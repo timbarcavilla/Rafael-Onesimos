@@ -23,7 +23,7 @@ class Pidgey extends Pokemon {
   }
 
   String toString() {
-    return Pidgey\n + super.toString();
+    return "Pidgey\n" + super.toString();
   }
 
 }

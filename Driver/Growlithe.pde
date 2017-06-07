@@ -23,7 +23,7 @@ class Growlithe extends Pokemon {
   }
 
   String toString() {
-    return Growlithe\n + super.toString();
+    return "Growlithe\n" + super.toString();
   }
 
 }

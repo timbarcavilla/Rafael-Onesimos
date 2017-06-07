@@ -23,7 +23,7 @@ class Graveler extends Pokemon {
   }
 
   String toString() {
-    return Graveler\n + super.toString();
+    return "Graveler\n" + super.toString();
   }
 
 }

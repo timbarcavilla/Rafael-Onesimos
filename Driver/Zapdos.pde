@@ -23,7 +23,7 @@ class Zapdos extends Pokemon {
   }
 
   String toString() {
-    return Zapdos\n + super.toString();
+    return "Zapdos\n" + super.toString();
   }
 
 }

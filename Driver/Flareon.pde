@@ -23,7 +23,7 @@ class Flareon extends Pokemon {
   }
 
   String toString() {
-    return Flareon\n + super.toString();
+    return "Flareon\n" + super.toString();
   }
 
 }

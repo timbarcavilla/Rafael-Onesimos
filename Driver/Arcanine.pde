@@ -23,7 +23,7 @@ class Arcanine extends Pokemon {
   }
 
   String toString() {
-    return Arcanine\n + super.toString();
+    return "Arcanine\n" + super.toString();
   }
 
 }
