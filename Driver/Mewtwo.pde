@@ -17,9 +17,7 @@ class Mewtwo extends Pokemon {
     atk2 = new Move( "Aura Sphere",20,80,100,1,0,0 );
     atk3 = new Move( "Psychic",10,90,100,1,0,0 );
     atk4 = new Move( "Thunder",10,110,70,1,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+ 
   }
 
   String toString() {

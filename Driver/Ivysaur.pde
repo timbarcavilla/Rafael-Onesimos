@@ -17,9 +17,7 @@ class Ivysaur extends Pokemon {
     atk2 = new Move( "Tackle",35,50,100,0,0,0 );
     atk3 = new Move( "Growl",40,0,100,2,3,5 );
     atk4 = new Move( "Razor Leaf",25,55,95,1,0,0 );
-    hasEvo = true;
-    evoLvl = 32;
-    evoTo = 3;
+   
   }
 
   String toString() {

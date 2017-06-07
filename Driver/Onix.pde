@@ -17,9 +17,7 @@ class Onix extends Pokemon {
     atk2 = new Move( "Screech",40,0,85,2,2,10 );
     atk3 = new Move( "Iron Tail",15,100,75,0,0,0 );
     atk4 = new Move( "Slam",20,80,75,0,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+   
   }
 
   String toString() {

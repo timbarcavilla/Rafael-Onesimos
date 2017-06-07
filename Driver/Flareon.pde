@@ -17,9 +17,7 @@ class Flareon extends Pokemon {
     atk2 = new Move( "Quick Attack",30,40,100,0,0,0 );
     atk3 = new Move( "Ember",25,40,100,1,0,0 );
     atk4 = new Move( "Flamethrower",15,90,100,1,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+ 
   }
 
   String toString() {

@@ -17,9 +17,7 @@ class Blastoise extends Pokemon {
     atk2 = new Move( "Bubble",30,40,100,1,0,0 );
     atk3 = new Move( "Tail Whip",30,0,100,2,2,5 );
     atk4 = new Move( "Hydro Cannon",5,150,90,1,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+
   }
 
   String toString() {

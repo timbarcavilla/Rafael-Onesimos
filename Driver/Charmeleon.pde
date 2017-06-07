@@ -17,9 +17,7 @@ class Charmeleon extends Pokemon {
     atk2 = new Move( "Growl",40,0,100,2,3,5 );
     atk3 = new Move( "Ember",25,40,100,1,0,0 );
     atk4 = new Move( "Fire Spin",15,35,85,1,0,0 );
-    hasEvo = true;
-    evoLvl = 36;
-    evoTo = 6;
+
   }
 
   String toString() {

@@ -1,6 +1,7 @@
 PImage center;
 PImage pt;
 PImage gy;
+PImage pl;
 
 boolean pokemonPicked, puzzleSolved, doneTyping, stringType, intType, canMove, buttonClicked, doneIntro;
 
@@ -22,6 +23,7 @@ void setup() {
   center = loadImage("center.png");
   pt = loadImage("path.jpg");
   gy = loadImage("gym.png");
+  pl = loadImage("player.png");
   pokemonPicked = false;
   puzzleSolved = false;
   doneTyping = false;

@@ -17,9 +17,7 @@ class Magikarp extends Pokemon {
     atk2 = new Move( "null",-1,-1,-1,-1,-1,-1 );
     atk3 = new Move( "null",-1,-1,-1,-1,-1,-1 );
     atk4 = new Move( "null",-1,-1,-1,-1,-1,-1 );
-    hasEvo = true;
-    evoLvl = 20;
-    evoTo = 130;
+
   }
 
   String toString() {

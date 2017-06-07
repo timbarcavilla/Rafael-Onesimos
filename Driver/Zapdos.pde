@@ -13,17 +13,13 @@ class Zapdos extends Pokemon {
     _speed = 100;
     _type1 = 6;
     _type2 = 10;
-    atk1 = new Move( "Thunder Shock",30,40,100,1,0,0 );
-    atk2 = new Move( "Drill Peck",35,35,100,0,0,0 );
-    atk3 = new Move( "Thunder",10,110,70,1,0,0 );
-    atk4 = new Move( "Sky Attack",5,140,90,2,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+    atk1 = new Move( "Thunder Shock", 30, 40, 100, 1, 0, 0 );
+    atk2 = new Move( "Drill Peck", 35, 35, 100, 0, 0, 0 );
+    atk3 = new Move( "Thunder", 10, 110, 70, 1, 0, 0 );
+    atk4 = new Move( "Sky Attack", 5, 140, 90, 2, 0, 0 );
   }
 
   String toString() {
     return "Zapdos\n" + super.toString();
   }
-
 }

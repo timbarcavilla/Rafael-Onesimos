@@ -17,9 +17,7 @@ class Vaporeon extends Pokemon {
     atk2 = new Move( "Quick Attack",30,40,100,0,0,0 );
     atk3 = new Move( "Water Gun",25,40,100,1,0,0 );
     atk4 = new Move( "Hydro Pump",5,110,80,1,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+   
   }
 
   String toString() {

@@ -17,9 +17,7 @@ class Growlithe extends Pokemon {
     atk2 = new Move( "Roar",20,0,100,2,3,5 );
     atk3 = new Move( "Ember",25,40,100,1,0,0 );
     atk4 = new Move( "Take Down",20,90,85,0,0,0 );
-    hasEvo = true;
-    evoLvl = 30;
-    evoTo = 59;
+  
   }
 
   String toString() {

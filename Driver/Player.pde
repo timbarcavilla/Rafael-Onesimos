@@ -114,8 +114,11 @@ class Player extends Trainer {
   }
 
   void display() {
+    /*
     fill(#16E6F0);
     ellipse(x, y, d, d);
+    */
+    image(pl,x,y);
   }
 
   int convert(boolean boo) {

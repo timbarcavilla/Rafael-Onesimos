@@ -17,9 +17,7 @@ class Wartortle extends Pokemon {
     atk2 = new Move( "Bubble",30,40,100,1,0,0 );
     atk3 = new Move( "Bite",25,60,100,0,0,0 );
     atk4 = new Move( "Water Gun",25,40,100,1,0,0 );
-    hasEvo = true;
-    evoLvl = 36;
-    evoTo = 9;
+    
   }
 
   String toString() {

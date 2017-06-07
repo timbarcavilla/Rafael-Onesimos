@@ -17,9 +17,7 @@ class Articuno extends Pokemon {
     atk2 = new Move( "Ice Beam",10,90,100,1,0,0 );
     atk3 = new Move( "Blizzard",5,110,70,1,0,0 );
     atk4 = new Move( "Sky Attack",5,140,90,2,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+  
   }
 
   String toString() {

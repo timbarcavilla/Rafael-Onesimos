@@ -17,9 +17,7 @@ class Venusaur extends Pokemon {
     atk2 = new Move( "Tackle",35,50,100,0,0,0 );
     atk3 = new Move( "Vine Whip",25,45,100,0,0,0 );
     atk4 = new Move( "Frenzy Plant",5,150,90,1,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+   
   }
 
   String toString() {

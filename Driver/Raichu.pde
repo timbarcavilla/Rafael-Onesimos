@@ -17,9 +17,7 @@ class Raichu extends Pokemon {
     atk2 = new Move( "Thunder Shock",30,40,100,1,0,0 );
     atk3 = new Move( "Thunderbolt",15,90,100,1,0,0 );
     atk4 = new Move( "Iron Tail",15,100,75,0,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+ 
   }
 
   String toString() {

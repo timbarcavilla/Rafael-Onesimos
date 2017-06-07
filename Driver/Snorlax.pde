@@ -17,9 +17,7 @@ class Snorlax extends Pokemon {
     atk2 = new Move( "Amnesia",20,0,100,2,4,10 );
     atk3 = new Move( "Take Down",20,90,85,0,0,0 );
     atk4 = new Move( "Earthquake",10,100,100,1,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+    
   }
 
   String toString() {

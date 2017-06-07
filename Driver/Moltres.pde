@@ -17,9 +17,7 @@ class Moltres extends Pokemon {
     atk2 = new Move( "Fire Spin",15,35,85,1,0,0 );
     atk3 = new Move( "Fire Blast",5,110,85,1,0,0 );
     atk4 = new Move( "Sky Attack",5,140,90,2,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+  
   }
 
   String toString() {

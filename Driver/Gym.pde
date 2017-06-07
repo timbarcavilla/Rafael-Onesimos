@@ -34,16 +34,16 @@ class Gym {
       pokemonPicked = false;
 
       Pokemon _leaderPoke;
-      if (name.equals("Allania")) {
+      if (_name.equals("Allania")) {
       _leaderPoke = new Bulbasaur("bulb", 5);
       _leader.addPokemon(_leaderPoke);
       }
-      if (name.equals("Ericatonia")) {
-        leaderPoke = new Snorlax("Snorlax", 10);
+      if (_name.equals("Ericatonia")) {
+        _leaderPoke = new Snorlax("Snorlax", 10);
         _leader.addPokemon(_leaderPoke);
       }
-      if (name.equals("Timberville")) {
-        _leaderPoke = new Gyrados("Gyrados", 20);
+      if (_name.equals("Timberville")) {
+        _leaderPoke = new Wartortle("Wartortle", 20);
         _leader.addPokemon(_leaderPoke);
       }
       

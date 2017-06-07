@@ -17,9 +17,7 @@ class Geodude extends Pokemon {
     atk2 = new Move( "Defense Curl",40,0,100,2,3,5 );
     atk3 = new Move( "Rock Throw",15,50,90,1,0,0 );
     atk4 = new Move( "Harden",30,0,100,2,3,5 );
-    hasEvo = true;
-    evoLvl = 25;
-    evoTo = 75;
+    
   }
 
   String toString() {

@@ -17,9 +17,7 @@ class Eevee extends Pokemon {
     atk2 = new Move( "Bite",25,60,100,0,0,0 );
     atk3 = new Move( "Quick Attack",30,40,100,0,0,0 );
     atk4 = new Move( "null",-1,-1,-1,-1,-1,-1 );
-    hasEvo = true;
-    evoLvl = 20;
-    evoTo = 134;
+
   }
 
   String toString() {

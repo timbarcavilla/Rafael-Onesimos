@@ -17,9 +17,7 @@ class Gyarados extends Pokemon {
     atk2 = new Move( "Dragon Pulse",10,85,100,1,0,0 );
     atk3 = new Move( "Water Pulse",20,60,100,1,0,0 );
     atk4 = new Move( "Aqua Tail",10,90,90,0,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+  
   }
 
   String toString() {

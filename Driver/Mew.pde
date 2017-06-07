@@ -17,9 +17,7 @@ class Mew extends Pokemon {
     atk2 = new Move( "Confusion",25,50,100,1,0,0 );
     atk3 = new Move( "Psychic",10,90,100,1,0,0 );
     atk4 = new Move( "Mega Punch",20,80,85,0,0,0 );
-    hasEvo = false;
-    evoLvl = -1;
-    evoTo = 0;
+  
   }
 
   String toString() {
