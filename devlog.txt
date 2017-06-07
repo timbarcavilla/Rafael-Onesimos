@@ -67,7 +67,10 @@ Tim started working on main menu, buttons, images, created Map, DarkGrass, Cente
 06/05/17
 Tim finished move function, started working on exits
 Allan worked on Gym battle functions
-Eric worked on moves 
+Eric worked on moves
 
 06/06/17
 Tim finished exit, center function.
+Eric finished Move
+Tim, Eric worked on NPC
+Allan collected graphic and debugged
