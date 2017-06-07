@@ -5,7 +5,6 @@ class Raichu extends Pokemon {
     _name = newName;
     _index = 26;
     _lvl = newLvl;
-    // _moveset = [INSERT MOVESET HERE];
     _hp = 60;
     _atk = 90;
     _def = 55;
@@ -14,11 +13,11 @@ class Raichu extends Pokemon {
     _speed = 100;
     _type1 = 6;
     _type2 = 0;
-    atk1 = new Move(  );
-    atk2 = new Move(  );
-    atk3 = new Move(  );
-    atk4 = null;
-    hasEvo = FALSE;
+    atk1 = new Move( "Thunder",10,110,70,1,0,0 );
+    atk2 = new Move( "Thunder Shock",30,40,100,1,0,0 );
+    atk3 = new Move( "Thunderbolt",15,90,100,1,0,0 );
+    atk4 = new Move( "Iron Tail",15,100,75,0,0,0 );
+    hasEvo = false;
     evoLvl = -1;
     evoTo = 0;
   }

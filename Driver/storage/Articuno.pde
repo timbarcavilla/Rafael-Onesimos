@@ -5,7 +5,6 @@ class Articuno extends Pokemon {
     _name = newName;
     _index = 144;
     _lvl = newLvl;
-    // _moveset = [INSERT MOVESET HERE];
     _hp = 90;
     _atk = 85;
     _def = 100;
@@ -14,11 +13,11 @@ class Articuno extends Pokemon {
     _speed = 85;
     _type1 = 7;
     _type2 = 10;
-    atk1 = new Move(  );
-    atk2 = new Move(  );
-    atk3 = new Move(  );
-    atk4 = null;
-    hasEvo = FALSE;
+    atk1 = new Move( "Peck",35,35,100,0,0,0 );
+    atk2 = new Move( "Ice Beam",10,90,100,1,0,0 );
+    atk3 = new Move( "Blizzard",5,110,70,1,0,0 );
+    atk4 = new Move( "Sky Attack",5,140,90,2,0,0 );
+    hasEvo = false;
     evoLvl = -1;
     evoTo = 0;
   }
