@@ -13,6 +13,7 @@ class Timberville extends Map{
     centerY2 = 500;
     gymlvl = 1;
     ex1 = new Exit(280,370,600,650);
+    ex2 = new Exit(800,800,800,800);
     c = new Center(130,420);
   }
   

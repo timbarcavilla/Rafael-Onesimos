@@ -18,7 +18,7 @@ class Bulbasaur extends Pokemon {
     atk1 = new Move( "Vine Whip",25,45,100,0,5,0 );
     atk2 = new Move( "Tackle",35,40,100,0,2,0 );
     atk3 = new Move( "Razor Leaf",25,55,95,0,5,0 );
-    atk4 = null;
+    atk4 = new Move( "Facade",20,70,100,0,2,0);
     hasEvo = true;
     evoLvl = 16;
     evoTo = 2;
