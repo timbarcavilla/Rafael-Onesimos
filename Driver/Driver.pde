@@ -92,10 +92,7 @@ void draw() {
    
    System.out.println("Entering the Allania gym.");
    
-  /*puzzle
-   while (puzzleSolved == false){
-   
-   }
+ 
    
    
    System.out.println("My name is Allan! I'm the ALLANIA LEADER! ");
@@ -682,17 +679,17 @@ void draw() {
    while (pokemonPicked = false){
    int choice = Keyboard.readInt();
    if (choice == 1){
-   System.out.println("What name do you want to give to your Pidgey?");
+   System.out.println("What name do you want to give to your Eevee?");
    String newName = Keyboard.readString();
    yourPokemon = new Eevee(newName,5);
    }
    else if (choice  == 2){
-   System.out.println("What name do you want to give to your Onix?");
+   System.out.println("What name do you want to give to your Pikachu?");
    String newName = Keyboard.readString();
    yourPokemon = new Pikachu(newName,5);
    }
    else if (choice == 3){
-   System.out.println("What name do you want to give to your Snorlax?");
+   System.out.println("What name do you want to give to your Magikarp?");
    String newName = Keyboard.readString();
    yourPokemon = new Magikarp(newName,5);
    }
